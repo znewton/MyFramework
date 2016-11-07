@@ -1,12 +1,18 @@
 <?php
 
-class RouteConfig
+class Config
 {
     private $routeConfig = [
         'test' => [
             'uri' => '',
             'action' => [
                 'view' => 'view.phtml',
+            ],
+        ],
+        'about' => [
+            'uri' => '',
+            'action' => [
+                'view' => 'about.phtml',
             ],
         ],
         'testRest' => [
@@ -45,5 +51,25 @@ class RouteConfig
     ];
     function getRouteConfig(){
         return $this->routeConfig;
+    }
+
+    private $viewConfig = [
+        'nav_links' => [
+            'about' => [
+                'label' => 'About',
+                'href' => '/about'
+            ],
+            'test' => [
+                'label' => 'Test',
+                'href' => '/test'
+            ]
+        ],
+        'drawer_links' => [],
+        'footer_contact' => [],
+        'footer_social' => [],
+    ];
+
+    function getViewConfig(){
+        return $this->viewConfig;
     }
 }

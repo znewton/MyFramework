@@ -1,7 +1,7 @@
 <?php
-include_once('lib/RouteConfig.php');
-$routeConfig = new RouteConfig();
-$ROUTE_CONFIGS = $routeConfig->getRouteConfig();
+include_once('lib/Config.php');
+$config = new Config();
+$ROUTE_CONFIGS = $config->getRouteConfig();
 function getCurrentUri()
 {
     $basepath = implode('/', array_slice(explode('/', $_SERVER['SCRIPT_NAME']), 0, -1)) . '/';
@@ -81,6 +81,8 @@ if(!empty($routes) && $route != 'Route Does Not Exist')
 }
 else
 {
-    include 'views/index.phtml';
+    include 'lib/ViewRenderer.php';
+    $viewRenderer = new ViewRenderer();
+    $viewRenderer->renderView('index.phtml');
 }
 ?>
