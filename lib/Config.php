@@ -6,7 +6,7 @@ class Config
 		'test' => [
 			'uri' => '',
 			'action' => [
-				'view' => 'view.phtml',
+				'view' => 'test.html',
 			],
 		],
 		'about' => [

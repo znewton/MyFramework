@@ -17,8 +17,11 @@ class ViewRenderer
 		echo $this->renderHead();
 		echo $this->renderNavbar();
 		echo $this->renderDrawer();
+        echo '<main>';
 		set_include_path('');
 		include 'views/'.$viewFile;
+        echo '</main>';
+        echo $this->renderFooter();
 	}
 
 	private function renderHead(){
@@ -51,7 +54,6 @@ HTML;
 		return <<<HTML
 <nav id="navbar">
 	<div class="left-nav">
-			<div class="ham-menu"><span></span><span></span><span></span></div>
 			<a href="/" class="home-link">Home</a>
 	</div>
 	<div class="right-nav">
@@ -70,14 +72,16 @@ HTML;
 		}
 		$links = implode("\n",$links);
 		return <<<HTML
+<div id="ham-menu"><span></span><span></span><span></span></div>
+<div id="swipe-area"></div>
 <nav id="drawer">
-	<a href="/">Home</a>
+	<a href="/" class="home-link">Home</a>
 	{$links}
 </nav>
 HTML;
 
 	}
 	private function renderFooter(){
-
+        return '';
 	}
 }
