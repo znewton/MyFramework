@@ -1,26 +1,26 @@
 body{
-    background-color: #efefef;
-    font-size: 100%;
+	background-color: #efefef;
+	font-size: 100%;
 }
 
 #navbar {
-    background: transparent;
+	background: transparent;
 }
 #navbar ul {
-    list-style: none;
+	list-style: none;
 }
 #navbar
 #navbar ul > li{
-    display: inline-block;
+	display: inline-block;
 }
 #navbar ul > li > a{
-    color: #3b3d4a;
-    font-size: 1.1em;
+	color: #3b3d4a;
+	font-size: 1.1em;
 }
 #navbar ul > li > a{
-    display: block;
-    color: #3b3d4a;
-    font-size: 1.1em;
+	display: block;
+	color: #3b3d4a;
+	font-size: 1.1em;
 }
 
 #navbar .left-nav{
@@ -28,11 +28,11 @@ body{
 }
 
 #drawer {
-    background: #3b3d4a;
-    position: fixed;
+	background: #3b3d4a;
+	position: fixed;
 }
 #drawer a{
-    display: block;
-    color: #fff;
-    font-size: 1.1em;
+	display: block;
+	color: #fff;
+	font-size: 1.1em;
 }
