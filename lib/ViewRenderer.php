@@ -16,6 +16,7 @@ class ViewRenderer
     {
         echo $this->renderHead();
         echo $this->renderNavbar();
+        echo $this->renderDrawer();
         set_include_path('');
         include 'views/'.$viewFile;
     }
@@ -43,22 +44,18 @@ HTML;
         $links = [];
         foreach ($this->config['nav_links'] as $link){
             $links[] = <<<HTML
-<li><a href="{$link['href']}">{$link['label']}</a></li>
+<a href="{$link['href']}">{$link['label']}</a>
 HTML;
         }
         $links = implode("\n",$links);
         return <<<HTML
 <nav id="navbar">
     <div class="left-nav">
-        <ul>
-            <li class="ham-menu"><span></span><span></span><span></span></li>
-            <li class="home-link"><a href="/">Home</a></li>
-        </ul>
+            <div class="ham-menu"><span></span><span></span><span></span></div>
+            <a href="/" class="home-link">Home</a>
     </div>
     <div class="right-nav">
-        <ul>
-            {$links}
-        </ul>
+         {$links}
     </div>
 </nav>
 HTML;
@@ -68,13 +65,14 @@ HTML;
         $links = [];
         foreach ($this->config['nav_links'] as $link){
             $links[] = <<<HTML
-<li><a href="{$link['href']}">{$link['label']}</a></li>
+<a href="{$link['href']}">{$link['label']}</a>
 HTML;
         }
         $links = implode("\n",$links);
         return <<<HTML
 <nav id="drawer">
-
+    <a href="/">Home</a>
+    {$links}
 </nav>
 HTML;
 
