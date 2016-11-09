@@ -54,7 +54,7 @@ HTML;
 		return <<<HTML
 <nav id="navbar">
 	<div class="left-nav">
-			<a href="/" class="home-link">Home</a>
+			<a href="/" class="home-link">Lorem Ipsum</a>
 	</div>
 	<div class="right-nav">
 		 {$links}
@@ -75,7 +75,6 @@ HTML;
 <div id="ham-menu"><span></span><span></span><span></span></div>
 <div id="swipe-area"></div>
 <nav id="drawer">
-	<a href="/" class="home-link">Home</a>
 	{$links}
 </nav>
 HTML;
