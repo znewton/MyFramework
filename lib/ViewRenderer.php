@@ -73,7 +73,7 @@ HTML;
 		$links = implode("\n",$links);
 		return <<<HTML
 <div id="ham-menu"><span></span><span></span><span></span></div>
-<div id="swipe-area"></div>
+<div id="drawer-indicator"></div>
 <nav id="drawer">
 	{$links}
 </nav>
