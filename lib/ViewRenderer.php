@@ -14,6 +14,7 @@ class ViewRenderer
 
 	public function renderView($viewFile)
 	{
+	    include_once('ComponentRenderer.php');
 		echo $this->renderHead();
 		echo $this->renderNavbar();
 		echo $this->renderDrawer();
@@ -37,7 +38,9 @@ class ViewRenderer
 	<meta name="description" content="My own framework with my own theme" />
 	<meta name="keywords" content="framework, theme, php, js, css, html" />
 	<meta name="author" content="znewton" />
-	<link rel="stylesheet" href="/lib/css/myFramework.css">
+	<link rel="stylesheet" href="/lib/css/view.css">
+	<link rel="stylesheet" href="/lib/css/components.css">
+	<link rel="stylesheet" href="/lib/css/font-awesome-4.7.0/css/font-awesome.min.css">
 	<script src="/lib/js/myFramework.js"></script>
 </head>
 HTML;

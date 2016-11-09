@@ -1,0 +1,99 @@
+/*-----Clickable-----*/
+.clickable{
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+}
+.clickable:hover,
+.clickable:focus{
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    transition: box-shadow 0.2s;
+}
+/*-----Alerts------*/
+.alert{
+    display: block;
+    width: 100%;
+    border: 1px solid;
+    background-color: #eaeaea;
+    color: #555;
+    border-color: #ddd;
+    border-radius: 0;
+    line-height: 10vw;
+    vertical-align: middle;
+    margin-top: 2vw;
+}
+.alert > i {
+    opacity: 0.7;
+}
+.alert-warning{
+    background-color: #fcf8e3;
+    color: #c09853;
+    border-color: #fbeed5;
+}
+.alert-info{
+    background-color: #d9edf7;
+    color: #3a87ad;
+    border-color: #bce8f1;
+}
+.alert-error{
+    background-color: #f2dede;
+    color: #b94a48;
+    border-color: #eed3d7;
+}
+.alert-success{
+    background-color: #dff0d8;
+    color: #468847;
+    border-color: #d6e9c6;
+}
+
+/*-----Buttons-----*/
+.btn {
+    display: inline-block;
+    line-height: 10vw;
+    min-width: 10vw;
+    vertical-align: middle;
+    border-radius: 0;
+    border: 1px solid;
+    margin: 1vw;
+    font-size: inherit;
+    background-color: transparent;
+    color: #fff;
+}
+.btn:hover{
+    color: #fff;
+    transition: color 0.2s;
+}
+.btn-default {
+    color: #555;
+}
+.btn-default:hover {
+    background-color: #555;
+    border-color: transparent;
+}
+.btn-primary {
+    color: #3a87ad;
+}
+.btn-primary:hover {
+    background-color: #3a87ad;
+    border-color: transparent;
+}
+.btn-warning {
+    color: #c09853;
+}
+.btn-warning:hover {
+    background-color: #c09853;
+    border-color: transparent;
+}
+.btn-danger {
+    color: #b94a48;
+}
+.btn-danger:hover {
+    background-color: #b94a48;
+    border-color: transparent;
+}
+.btn-success {
+    color: #468847;
+}
+.btn-success:hover {
+    background-color: #468847;
+    border-color: transparent;
+}
