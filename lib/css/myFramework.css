@@ -89,16 +89,16 @@ a {
 
 #drawer-indicator {
     position: fixed;;
-    top: -25vh;
+    top: -5vh;
     right: -3vw;
     width: 0;
-    height: 150vh;
+    height: 110vh;
     z-index: 900;
     background: #fefefe;
     /*background: #5c5edc;*/
     opacity: 0.97;
 
-    border-radius: 50%;
+    border-radius: 100%;
 }
 #drawer {
 	background: #fefefe;
@@ -129,17 +129,16 @@ a {
     background-color: #efefef;
     color: #3b3d5a;
 }
+.right-nav{
+    display: none;
+}
+
 
 main {
     margin-top: 15vw ;
     padding: 0 5vw;
 }
 
-@media (max-width: 991px){
-    .right-nav{
-        display: none;
-    }
-}
 @media (min-width: 992px){
     #drawer {
         width: 280px;
