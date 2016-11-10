@@ -21,11 +21,13 @@ a {
     left: 0;
     width: 100vw;
     z-index: 999;
+    transition: height 0.3s;
 }
 #navbar div.left-nav{
     position: fixed;
     left: 15vw;
     width: 70vw;
+    transition: left 0.3s ease;
 }
 #navbar div.right-nav{
     position: fixed;
@@ -51,6 +53,35 @@ a {
     font-size: 1.2em;
     font-weight: 600;
     color: #5c5edc;
+    max-height: 15vw;
+    padding: 0 auto;
+    margin: 0 12.5vw;
+    line-height: 13vw;
+    transition: all 0.3s, width 0.4s;
+}
+#navbar a.home-link > svg{
+    /*padding: 0 auto;*/
+    display: inline-block;
+    vertical-align: middle;
+    width: 45vw;
+    height: auto;
+    opacity: 1;
+}
+#navbar.scrolled a.home-link{
+    margin-left: 0;
+    padding-left: 0;
+    width: 20vw;
+    overflow: hidden;
+}
+#navbar.scrolled div.left-nav{
+    left: 5vw;
+}
+#navbar a.home-link > svg > path{
+    opacity: 1;
+    transition: all 0.3s;
+}
+#navbar.scrolled a.home-link > svg > path:not(:last-of-type){
+    opacity: 0;
 }
 
 
@@ -151,8 +182,9 @@ a {
 
 
 main {
-    margin-top: 15vw ;
     padding: 0 5vw;
+    padding-top: 15vw ;
+    min-height: 100vh;
 }
 
 @media (min-width: 992px){
@@ -163,4 +195,19 @@ main {
     #ham-menu.open {
         left: 280px;
     }
+}
+
+footer {
+    background: #efefef;
+    opacity: 0.97;
+}
+footer .footer-section{
+    padding: 2.5vw 5vw;
+}
+footer img {
+    max-width: 45vw;
+}
+footer a{
+    color: #4DA9DE;
+    font-size: 0.8em;
 }

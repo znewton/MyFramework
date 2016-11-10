@@ -1,9 +1,10 @@
 <?php
 $component = new ComponentRenderer();
 ?>
+<h3>Forms</h3>
 <h3>Alerts</h3>
 <?= $component->alert('This is an alert', 'default') ?>
-<?= $component->alert('This is an alert', 'warning',true) ?>
+<?= $component->alert('This is an alert', 'warning',true, 'This is a description') ?>
 <?= $component->alert('This is an alert', 'info') ?>
 <?= $component->alert('This is an alert', 'error') ?>
 <?= $component->alert('This is an alert', 'success') ?>

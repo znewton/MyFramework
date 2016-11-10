@@ -55,10 +55,15 @@ HTML;
 HTML;
 		}
 		$links = implode("\n",$links);
+        $logo = '<img src="/lib/NewtonLogo.svg"">';
+//        $logo = '<div class="svg-wrapper">'. file_get_contents('NewtonLogo.svg',FILE_USE_INCLUDE_PATH).'</div>';
+        $logo = file_get_contents('NewtonLogo.svg',FILE_USE_INCLUDE_PATH);
 		return <<<HTML
 <nav id="navbar">
 	<div class="left-nav">
-			<a href="/" class="home-link">Lorem Ipsum</a>
+        <a href="/" class="home-link">
+            {$logo}
+        </a>
 	</div>
 	<div class="right-nav">
 		 {$links}
@@ -87,6 +92,14 @@ HTML;
 
     }
 	private function renderFooter(){
-        return '';
+        $logo = '<img src="/lib/NewtonLogo.svg"">';
+        return <<<HTML
+<footer>
+<div class="footer-section">
+    {$logo}
+    <a href="mailto:znewton13@gmail.com">znewton13@gmail.com</a>
+</div>
+</footer>
+HTML;
 	}
 }

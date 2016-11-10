@@ -2,10 +2,23 @@
 
 class ComponentRenderer
 {
-    public function alert($message, $type = 'default', $clickable = false){
+    public function alert($message, $type = 'default', $clickable = false, $description = ''){
+        $alertCollapseAttrs = '';
+        $alertCollapsed = '';
+        if($clickable && $description != ''){
+            $alertCollapseAttrs = ' onclick="toggleCollapse(this)"';
+            $alertCollapsed = <<<HTML
+<div class="alert-description collapse-toggle collapsed">
+    {$description}
+</div>
+HTML;
+        }
         $clickable=($clickable) ? 'clickable' : '';
         return <<<HTML
-<div class="alert alert-{$type} {$clickable}"><i class="fa fa-exclamation-circle fa-fw"></i>{$message}</div>
+<div class="alert alert-{$type} {$clickable}" {$alertCollapseAttrs}>
+    <i class="fa fa-exclamation-circle fa-fw"></i>{$message}
+    {$alertCollapsed}
+</div>
 HTML;
     }
 
