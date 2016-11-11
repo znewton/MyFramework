@@ -79,3 +79,31 @@
     -webkit-transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
 }
+
+
+.form-element-text input + label::after{
+    position: absolute;
+    content: '';
+    display: block;
+    left: 44vw;
+    bottom:1.3vw;
+    width: 0;
+    height: 0.3vw;
+    background-color: #1da1f2;
+    transition: all 0.3s;
+    z-index: 5;
+}
+.form-element-text input:focus + label::after,
+.form-element-text.has-text input + label::after{
+    left: 0;
+    width: 90vw;
+    bottom: -7.7vw;
+}
+.form-element-text.has-text.invalid input + label::after{
+    background-color: #e33f5f;
+    transition: background-color 0.3s;
+}
+.form-element-text.has-text.invalid input + label{
+    color:#e33f5f;
+    transition: color 0.3s;
+}

@@ -49,7 +49,7 @@ HTML;
         }
         return <<<HTML
 <div class="form-element-text {$inline}">
-    <input id="{$id}" type="{$type}" name="{$name}" value="" placeholder="" onchange="inputTextStyle(this)" {$inputAttrStr}>
+    <input id="{$id}" type="{$type}" name="{$name}" value="" placeholder="" {$inputAttrStr}>
     <label for="{$id}" {$labelAttrStr}>{$label}</label>
     {$passwordToggle}
 </div>
