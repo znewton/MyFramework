@@ -67,7 +67,7 @@
     overflow: hidden;
 }
 .btn:hover{
-    color: #fff;
+    /*color: #fff;*/
 }
 .btn::before{
     content: '';
@@ -94,29 +94,26 @@
     height: 200%;
     left:-50%;
     top: -50%;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 .btn-default {
-    color: #4DA9DE;
-    border-color: #7FDCFF;
+    color: #666;
+    border-color: #ddd;
 }
 .btn-default::after{
-    background-color: #4DA9DE;
+    background-color: #ddd;
 }
-.btn-default:hover {
-    border-color: #4DA9DE;
+.btn-default::before {
+    background-color: #eee;
 }
 
 .btn-primary {
     color: #3a87ad;
     border-color: #bce8f1;
 }
-.btn-primary:hover{
-    border-color: #3a87ad;
-}
 .btn-primary::after {
-    background-color: #3a87ad;
+    background-color: #bce8f1;
 }
 .btn-primary::before {
     background-color: #d9edf7;
@@ -126,11 +123,8 @@
     color: #c09853;
     border-color: #fbeed5;
 }
-.btn-warning:hover {
-    border-color: #c09853;
-}
 .btn-warning::after {
-    background-color: #c09853;
+    background-color: #fbeed5;
 }
 .btn-warning::before {
     background-color: #fcf8e3;
@@ -140,11 +134,8 @@
     color: #b94a48;
     border-color: #eed3d7;
 }
-.btn-danger:hover {
-    border-color: #b94a48;
-}
 .btn-danger::after {
-    background-color: #b94a48;
+    background-color: #eed3d7;
 }
 .btn-danger::before {
     background-color: #f2dede;
@@ -154,11 +145,8 @@
     color: #468847;
     border-color: #d6e9c6;
 }
-.btn-success:hover {
-    border-color: #468847;
-}
 .btn-success::after {
-    background-color: #468847;
+    background-color: #d6e9c6;
 }
 .btn-success::before {
     background-color: #dff0d8;
