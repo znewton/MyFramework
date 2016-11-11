@@ -170,7 +170,8 @@
     position: relative;
     display: block;
 }
-.form-element-text input[type=text]{
+.form-element-text input[type=text],
+.form-element-text input[type=password]{
     position: relative;
     width: 88vw;
     padding: 1vw;
@@ -184,7 +185,8 @@
     margin-top:5vw;
     background: transparent;
 }
-.form-element-text input[type=text] + label{
+.form-element-text input[type=text] + label,
+.form-element-text input[type=password] + label{
     position: absolute;
     color: #bbb;
     font-size: 1.1em;
@@ -197,12 +199,16 @@
     transition: all 0.2s;
 }
 .form-element-text input[type=text]:focus,
-.form-element-text input[type=text].has-text{
+.form-element-text input[type=password]:focus,
+.form-element-text input[type=text].has-text,
+.form-element-text input[type=password].has-text{
     outline: none;
     border-bottom-color: #1da1f2;
 }
 .form-element-text input[type=text]:focus + label,
-.form-element-text input[type=text].has-text + label{
+.form-element-text input[type=password]:focus + label,
+.form-element-text input[type=text].has-text + label,
+.form-element-text input[type=password].has-text + label{
     top: -1vw;
     left: 0;
     font-size: 0.95em;

@@ -50,4 +50,22 @@ HTML;
 </div>
 HTML;
     }
+    public function formPasswordElement($label,$name,$id,$inline=false, $inputAttrs=[],$labelAttrs=[]){
+        $inline = ($inline) ? 'inline' : '';
+        $inputAttrStr = '';
+        foreach ($inputAttrs as $attr => $value)
+        {
+            $inputAttrStr .=  ' ' . $attr . '="' . $value . '"';
+        }
+        $labelAttrStr = '';
+        foreach ($labelAttrs as $attr => $value){
+            $labelAttrStr .=  ' ' . $attr . '="' . $value . '"';
+        }
+        return <<<HTML
+<div class="form-element-text {$inline}">
+    <input id="{$id}" type="password" name="{$name}" value="" placeholder="" onchange="inputTextStyle(this)" $inputAttrStr>
+    <label for="{$id}" $labelAttrStr>{$label}</label>
+</div>
+HTML;
+    }
 }
