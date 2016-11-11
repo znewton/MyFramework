@@ -32,7 +32,7 @@ HTML;
 HTML;
     }
 
-    public function formTextElement($label,$name,$id,$inline=false, $inputAttrs=[],$labelAttrs=[]){
+    public function formTextElement($label,$name,$id,$type='text',$inline=false, $inputAttrs=[],$labelAttrs=[]){
         $inline = ($inline) ? 'inline' : '';
         $inputAttrStr = '';
         foreach ($inputAttrs as $attr => $value)
@@ -43,28 +43,15 @@ HTML;
         foreach ($labelAttrs as $attr => $value){
             $labelAttrStr .=  ' ' . $attr . '="' . $value . '"';
         }
-        return <<<HTML
-<div class="form-element-text {$inline}">
-    <input id="{$id}" type="text" name="{$name}" value="" placeholder="" onchange="inputTextStyle(this)" $inputAttrStr>
-    <label for="{$id}" $labelAttrStr>{$label}</label>
-</div>
-HTML;
-    }
-    public function formPasswordElement($label,$name,$id,$inline=false, $inputAttrs=[],$labelAttrs=[]){
-        $inline = ($inline) ? 'inline' : '';
-        $inputAttrStr = '';
-        foreach ($inputAttrs as $attr => $value)
-        {
-            $inputAttrStr .=  ' ' . $attr . '="' . $value . '"';
-        }
-        $labelAttrStr = '';
-        foreach ($labelAttrs as $attr => $value){
-            $labelAttrStr .=  ' ' . $attr . '="' . $value . '"';
+        $passwordToggle = '';
+        if($type=='password'){
+            $passwordToggle = '<span class="password-toggle"></span>';
         }
         return <<<HTML
 <div class="form-element-text {$inline}">
-    <input id="{$id}" type="password" name="{$name}" value="" placeholder="" onchange="inputTextStyle(this)" $inputAttrStr>
-    <label for="{$id}" $labelAttrStr>{$label}</label>
+    <input id="{$id}" type="{$type}" name="{$name}" value="" placeholder="" onchange="inputTextStyle(this)" {$inputAttrStr}>
+    <label for="{$id}" {$labelAttrStr}>{$label}</label>
+    {$passwordToggle}
 </div>
 HTML;
     }

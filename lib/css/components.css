@@ -170,8 +170,7 @@
     position: relative;
     display: block;
 }
-.form-element-text input[type=text],
-.form-element-text input[type=password]{
+.form-element-text input{
     position: relative;
     width: 88vw;
     padding: 0 1vw;
@@ -187,8 +186,7 @@
     overflow: hidden;
     background: transparent;
 }
-.form-element-text input[type=text] + label,
-.form-element-text input[type=password] + label{
+.form-element-text input + label{
     position: absolute;
     color: #bbb;
     font-size: 1.1em;
@@ -200,25 +198,20 @@
     z-index: 2;
     transition: all 0.3s;
 }
-.form-element-text input[type=text]:focus,
-.form-element-text input[type=password]:focus,
-.form-element-text input[type=text].has-text,
-.form-element-text input[type=password].has-text{
+.form-element-text input:focus,
+.form-element-text input.has-text{
     outline: none;
     /*border-bottom-color: #1da1f2;*/
 }
-.form-element-text input[type=text]:focus + label,
-.form-element-text input[type=password]:focus + label,
-.form-element-text input[type=text].has-text + label,
-.form-element-text input[type=password].has-text + label{
+.form-element-text input:focus + label,
+.form-element-text input.has-text + label{
     bottom: 10.5vw;
     left: 0.5vw;
     font-size: 0.95em;
     color: #1da1f2;
 }
 
-.form-element-text input[type=text] + label::after,
-.form-element-text input[type=password] + label::after {
+.form-element-text input + label::after{
     position: absolute;
     content: '';
     display: block;
@@ -230,11 +223,34 @@
     transition: all 0.3s;
     z-index: 5;
 }
-.form-element-text input[type=text]:focus + label::after,
-.form-element-text input[type=password]:focus + label::after,
-.form-element-text input[type=text].has-text + label::after,
-.form-element-text input[type=password].has-text + label::after {
+.form-element-text input:focus + label::after,
+.form-element-text input.has-text + label::after{
     left: 0;
     width: 90vw;
     bottom: -7.7vw;
+}
+.form-element-text input.has-text.invalid + label::after{
+    background-color: #e33f5f;
+    transition: background-color 0.3s;
+}
+
+span.password-toggle{
+    position: absolute;
+    right: 0;
+    top: 8.5vw;
+    color:#bbb;
+    z-index: 6;
+}
+span.password-toggle:hover{
+    cursor: pointer;
+}
+span.password-toggle::before{
+    font-family: FontAwesome;
+    content: '\f070';
+}
+span.password-toggle:hover::before{
+    content: '\f06e';
+}
+.form-element-text input[type=password].has-text + label + span.password-toggle::before{
+    color: #333;
 }
