@@ -55,4 +55,12 @@ HTML;
 </div>
 HTML;
     }
+
+    public function loadingBar(){
+
+        return <<<HTML
+<div class="loading-bar"></div>
+HTML;
+
+    }
 }
