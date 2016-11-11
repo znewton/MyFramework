@@ -45,7 +45,7 @@ HTML;
         }
         return <<<HTML
 <div class="form-element-text {$inline}">
-    <input id="{$id}" type="text" name="{$name}" value="" placeholder="" $inputAttrStr>
+    <input id="{$id}" type="text" name="{$name}" value="" placeholder="" onchange="inputTextStyle(this)" $inputAttrStr>
     <label for="{$id}" $labelAttrStr>{$label}</label>
 </div>
 HTML;
