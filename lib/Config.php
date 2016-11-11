@@ -66,7 +66,24 @@ class Config
 		],
 		'drawer_links' => [],
 		'footer_info' => [],
-		'footer_social' => [],
+		'footer_social' => [
+		    'github' => [
+		        'label' => 'znewton',
+                'href' => 'https://github.com/znewton'
+            ],
+		    'facebook' => [
+		        'label' => 'Zach Newton',
+                'href' => 'https://www.facebook.com/zach.newton.16'
+            ],
+		    'twitter' => [
+		        'label' => 'Figgynewts6',
+                'href' => 'https://twitter.com/Figgynewts6'
+            ],
+		    'instagram' => [
+		        'label' => 'figgynewts6',
+                'href' => 'https://www.instagram.com/figgynewts6'
+            ],
+        ],
 	];
 
 	function getViewConfig(){

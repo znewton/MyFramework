@@ -55,7 +55,7 @@ HTML;
 HTML;
 		}
 		$links = implode("\n",$links);
-        $logo = '<img src="/lib/NewtonLogo.svg"">';
+//        $logo = '<img src="/lib/NewtonLogo.svg"">';
 //        $logo = '<div class="svg-wrapper">'. file_get_contents('NewtonLogo.svg',FILE_USE_INCLUDE_PATH).'</div>';
         $logo = file_get_contents('NewtonLogo.svg',FILE_USE_INCLUDE_PATH);
 		return <<<HTML
@@ -92,8 +92,16 @@ HTML;
 
     }
 	private function renderFooter(){
-        $logo = '<img src="/lib/NewtonLogo.svg"">';
+//        $logo = '<img src="/lib/NewtonLogo.svg"">';
         $logo = file_get_contents('NewtonLogo.svg',FILE_USE_INCLUDE_PATH);
+        $socialLinks = '';
+        foreach ($this->config['footer_social'] as $link)
+        {
+            $socialLinks .= <<<HTML
+<a href="{$link['href']}">{$link['label']}</a>
+HTML;
+        }
+
         return <<<HTML
 <footer>
 <div class="footer-section footer-info">
@@ -101,6 +109,7 @@ HTML;
     <a href="mailto:znewton13@gmail.com">znewton13@gmail.com</a>
 </div>
 <div class="footer-section footer-social">
+    {$socialLinks}
 </div>
 </footer>
 HTML;

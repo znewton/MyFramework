@@ -2,12 +2,13 @@
 $component = new ComponentRenderer();
 ?>
 <h3>Forms</h3>
+
 <h3>Alerts</h3>
-<?= $component->alert('This is a default alert', 'default') ?>
-<?= $component->alert('This is a warning alert', 'warning',true, 'This is a description') ?>
-<?= $component->alert('This is an info alert', 'info') ?>
-<?= $component->alert('This is an error alert', 'error') ?>
-<?= $component->alert('This is a success alert', 'success') ?>
+<?= $component->alert('Default alert', 'default') ?>
+<?= $component->alert('Warning alert', 'warning',true, 'This is a description') ?>
+<?= $component->alert('Info alert', 'info') ?>
+<?= $component->alert('Error alert', 'error') ?>
+<?= $component->alert('Success alert', 'success') ?>
 
 <h3>Buttons</h3>
 <?= $component->button('button','Button', 'default') ?>
