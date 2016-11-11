@@ -95,8 +95,12 @@ HTML;
         $logo = '<img src="/lib/NewtonLogo.svg"">';
         return <<<HTML
 <footer>
-<div class="footer-section">
-    {$logo}
+<div class="footer-section footer-info">
+    <a href="/">{$logo}</a>
+    <a href="mailto:znewton13@gmail.com">znewton13@gmail.com</a>
+</div>
+<div class="footer-section footer-social">
+    <a href="/">{$logo}</a>
     <a href="mailto:znewton13@gmail.com">znewton13@gmail.com</a>
 </div>
 </footer>

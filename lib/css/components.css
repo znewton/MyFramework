@@ -23,7 +23,9 @@
 }
 .alert > i {
     opacity: 0.7;
+    padding: 0 2vw;
 }
+
 .alert-warning{
     background-color: #fcf8e3;
     color: #c09853;
@@ -52,54 +54,114 @@
 /*-----Buttons-----*/
 .btn {
     display: inline-block;
+    position: relative;
     line-height: 10vw;
     min-width: 10vw;
     vertical-align: middle;
-    border-radius: 0;
     border: 1px solid;
     margin: 1vw;
     font-size: 1em;
     background-color: transparent;
     color: #fff;
+    transition: all 0.3s;
+    overflow: hidden;
 }
 .btn:hover{
     color: #fff;
-    transition: color 0.2s;
 }
+.btn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+.btn::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 100%;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    transition: all 0.1s;
+}
+.btn:hover::after{
+    width: 200%;
+    height: 200%;
+    left:-50%;
+    top: -50%;
+    transition: all 0.3s;
+}
+
 .btn-default {
-    color: #555;
+    color: #4DA9DE;
+    border-color: #7FDCFF;
+}
+.btn-default::after{
+    background-color: #4DA9DE;
 }
 .btn-default:hover {
-    background-color: #555;
-    border-color: transparent;
+    border-color: #4DA9DE;
 }
+
 .btn-primary {
     color: #3a87ad;
+    border-color: #bce8f1;
 }
-.btn-primary:hover {
+.btn-primary:hover{
+    border-color: #3a87ad;
+}
+.btn-primary::after {
     background-color: #3a87ad;
-    border-color: transparent;
 }
+.btn-primary::before {
+    background-color: #d9edf7;
+}
+
 .btn-warning {
     color: #c09853;
+    border-color: #fbeed5;
 }
 .btn-warning:hover {
-    background-color: #c09853;
-    border-color: transparent;
+    border-color: #c09853;
 }
+.btn-warning::after {
+    background-color: #c09853;
+}
+.btn-warning::before {
+    background-color: #fcf8e3;
+}
+
 .btn-danger {
     color: #b94a48;
+    border-color: #eed3d7;
 }
 .btn-danger:hover {
-    background-color: #b94a48;
-    border-color: transparent;
+    border-color: #b94a48;
 }
+.btn-danger::after {
+    background-color: #b94a48;
+}
+.btn-danger::before {
+    background-color: #f2dede;
+}
+
 .btn-success {
     color: #468847;
+    border-color: #d6e9c6;
 }
 .btn-success:hover {
+    border-color: #468847;
+}
+.btn-success::after {
     background-color: #468847;
-    border-color: transparent;
+}
+.btn-success::before {
+    background-color: #dff0d8;
 }
 
 /*----Collapse----*/
