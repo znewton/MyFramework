@@ -1,12 +1,21 @@
 /*-----Clickable-----*/
 .clickable{
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+.clickable-text{
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 .clickable:hover,
 .clickable:focus{
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
     transition: box-shadow 0.2s;
+}
+.clickable-text:hover,
+.clickable-text:focus{
+    cursor: pointer;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    transition: text-shadow 0.2s;
 }
 /*-----Alerts------*/
 .alert{
@@ -66,6 +75,11 @@
     transition: all 0.3s;
     overflow: hidden;
 }
+.btn-block{
+    display: block;
+    width: 100%;
+    margin: 1vw 0;
+}
 .btn:hover{
     /*color: #fff;*/
 }
@@ -82,19 +96,17 @@
     content: '';
     position: absolute;
     left: 50%;
-    top: 50%;
-    border-radius: 100%;
+    top: 0;
+    /*border-radius: 100%;*/
     width: 0;
-    height: 0;
+    height: 200%;
     z-index: -1;
     transition: all 0.1s;
 }
 .btn:hover::after{
-    width: 200%;
-    height: 200%;
-    left:-50%;
-    top: -50%;
-    transition: all 0.5s;
+    width: 100%;
+    left:0;
+    transition: all 0.3s ease;
 }
 
 .btn-default {
@@ -225,6 +237,7 @@
 
 span.password-toggle{
     position: absolute;
+    display: block;
     right: 0;
     bottom: 0;
     color:#bbb;
@@ -234,11 +247,17 @@ span.password-toggle:hover{
     cursor: pointer;
 }
 span.password-toggle::before{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    line-height: 9vw;
     font-family: FontAwesome;
-    content: '\f070';
+}
+.form-element-text.has-text input[type=password] + label + span.password-toggle::before{
+    content: '\f06e';
 }
 .form-element-text.has-text input[type=text] + label + span.password-toggle::before{
-    content: '\f06e';
+    content: '\f070';
 }
 .form-element-text.has-text  input[type=password] + label + span.password-toggle::before,
 .form-element-text.has-text  input[type=text] + label + span.password-toggle::before{

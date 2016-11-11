@@ -28,7 +28,7 @@ HTML;
             $attrStr .= ' ' . $attr . '="' . $value . '"';
         }
         return <<<HTML
-<{$tag} class="btn btn-{$type} clickable">{$label}</>
+<{$tag} class="btn btn-{$type} clickable">{$label}</{$tag}>
 HTML;
     }
 
@@ -45,7 +45,7 @@ HTML;
         }
         $passwordToggle = '';
         if($type=='password'){
-            $passwordToggle = '<span class="password-toggle"></span>';
+            $passwordToggle = '<span class="password-toggle clickable-text"></span>';
         }
         return <<<HTML
 <div class="form-element-text {$inline}">

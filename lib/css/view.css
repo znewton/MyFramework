@@ -228,20 +228,18 @@ footer a::after{
     content: '';
     z-index: -1;
     position: absolute;
-    border-radius: 100%;
+    /*border-radius: 100%;*/
     left: 25%;
-    top: 50%;
-    height: 0;
+    top: 0;
+    height: 100%;
     width: 0;
     background-color: #ddd;
     transition: all 0.1s ease;
 }
 footer a:hover::after{
-    height: 400%;
-    top: -100%;
-    left: -50%;
-    width: 300%;
-    transition: all 0.5s;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease;
 }
 footer a > svg{
     /*padding: 0 auto;*/
