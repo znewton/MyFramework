@@ -65,7 +65,7 @@ class Config
 			]
 		],
 		'drawer_links' => [],
-		'footer_contact' => [],
+		'footer_info' => [],
 		'footer_social' => [],
 	];
 

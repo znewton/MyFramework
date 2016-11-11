@@ -93,6 +93,7 @@ HTML;
     }
 	private function renderFooter(){
         $logo = '<img src="/lib/NewtonLogo.svg"">';
+        $logo = file_get_contents('NewtonLogo.svg',FILE_USE_INCLUDE_PATH);
         return <<<HTML
 <footer>
 <div class="footer-section footer-info">
@@ -100,8 +101,6 @@ HTML;
     <a href="mailto:znewton13@gmail.com">znewton13@gmail.com</a>
 </div>
 <div class="footer-section footer-social">
-    <a href="/">{$logo}</a>
-    <a href="mailto:znewton13@gmail.com">znewton13@gmail.com</a>
 </div>
 </footer>
 HTML;
