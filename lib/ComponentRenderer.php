@@ -28,7 +28,7 @@ HTML;
             $attrStr .= ' ' . $attr . '="' . $value . '"';
         }
         return <<<HTML
-<{$tag} class="btn btn-{$type} clickable">{$label}</{$tag}>
+<{$tag} class="btn btn-{$type} clickable" {$attrStr}>{$label}</{$tag}>
 HTML;
     }
 
@@ -52,6 +52,29 @@ HTML;
     <input id="{$id}" type="{$type}" name="{$name}" value="" placeholder="" {$inputAttrStr}>
     <label for="{$id}" {$labelAttrStr}>{$label}</label>
     {$passwordToggle}
+</div>
+HTML;
+    }
+
+    public function formListElement($title, $type, $name, $options = [], $checkedValue=''){
+        $optionsStr = '';
+        foreach ($options as $value => $label)
+        {
+            $id = $name . '_' . str_replace(' ', '_', $value);
+            $checked = $checkedValue == $value ? 'checked="checked"' : '';
+            $optionsStr .= <<<HTML
+<li>
+    <input type="{$type}" name="{$name}" value="{$value}" id="{$id}" {$checked}>
+    <label for="{$id}">{$label}</label>
+</li>
+HTML;
+        }
+        return <<<HTML
+<div class="form-element-list">
+    <div class="checklist-title">{$title}</div>
+    <ul>
+        {$optionsStr}
+    </ul>
 </div>
 HTML;
     }
