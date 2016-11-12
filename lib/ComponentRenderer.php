@@ -70,8 +70,8 @@ HTML;
 HTML;
         }
         return <<<HTML
-<div class="form-element-list">
-    <div class="checklist-title">{$title}</div>
+<div class="form-element-list form-list-{$type}">
+    <div class="list-title">{$title}</div>
     <ul>
         {$optionsStr}
     </ul>
