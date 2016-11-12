@@ -8,23 +8,23 @@ $component = new ComponentRenderer();
 <?= $component->formTextElement('Email', 'email', 'email', 'email') ?>
 <?= $component->formTextElement('Password', 'password', 'password', 'password') ?>
 <?= $component->formListElement('What is life?', 'checkbox', 'life', [
-    '42' => '42',
-    'happy' => 'Happiness',
-    'love' => 'Love',
-    'siliconValley' => 'Silicon Valley',
+	'42' => '42',
+	'happy' => 'Happiness',
+	'love' => 'Love',
+	'siliconValley' => 'Silicon Valley',
 ], 'siliconValley') ?>
 <?= $component->formListElement('Favorite Color?', 'radio', 'color', [
-    'blue' => 'Blue',
-    'red' => 'Red',
-    'yellow' => 'Yellow',
-    'green' => 'Green',
+	'blue' => 'Blue',
+	'red' => 'Red',
+	'yellow' => 'Yellow',
+	'green' => 'Green',
 ], 'blue') ?>
 <?= $component->formSelectElement('Religion?', 'religion', [
-    '' => 'Choose a Religion...',
-    'buddhist' => 'Buddhism',
-    'christian' => 'Christianity',
-    'jewish' => 'Judaism',
-    'muslim' => 'Islam',
+	'' => 'Choose a Religion...',
+	'buddhist' => 'Buddhism',
+	'christian' => 'Christianity',
+	'jewish' => 'Judaism',
+	'muslim' => 'Islam',
 ], 'blue') ?>
 <?= $component->button('button','Submit', 'primary btn-block', ['style' => 'margin-top: 3vw;']) ?>
 

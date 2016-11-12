@@ -14,15 +14,15 @@ class ViewRenderer
 
 	public function renderView($viewFile)
 	{
-	    include_once('ComponentRenderer.php');
+		include_once('ComponentRenderer.php');
 		echo $this->renderHead();
 		echo $this->renderNavbar();
 		echo $this->renderDrawer();
-        echo '<main>';
+		echo '<main>';
 		set_include_path('');
 		include 'views/'.$viewFile;
-        echo '</main>';
-        echo $this->renderFooter();
+		echo '</main>';
+		echo $this->renderFooter();
 	}
 
 	private function renderHead(){
@@ -57,13 +57,13 @@ HTML;
 		$links = implode("\n",$links);
 //        $logo = '<img src="/lib/NewtonLogo.svg"">';
 //        $logo = '<div class="svg-wrapper">'. file_get_contents('NewtonLogo.svg',FILE_USE_INCLUDE_PATH).'</div>';
-        $logo = file_get_contents('NewtonLogo.svg',FILE_USE_INCLUDE_PATH);
+		$logo = file_get_contents('NewtonLogo.svg',FILE_USE_INCLUDE_PATH);
 		return <<<HTML
 <nav id="navbar">
 	<div class="left-nav">
-        <a href="/" class="home-link">
-            {$logo}
-        </a>
+		<a href="/" class="home-link">
+			{$logo}
+		</a>
 	</div>
 	<div class="right-nav">
 		 {$links}
@@ -90,26 +90,26 @@ HTML;
 	}
 	private function renderDrawerLink(){
 
-    }
+	}
 	private function renderFooter(){
 //        $logo = '<img src="/lib/NewtonLogo.svg"">';
-        $logo = file_get_contents('NewtonLogo.svg',FILE_USE_INCLUDE_PATH);
-        $socialLinks = '';
-        foreach ($this->config['footer_social'] as $link)
-        {
-            $socialLinks .= <<<HTML
+		$logo = file_get_contents('NewtonLogo.svg',FILE_USE_INCLUDE_PATH);
+		$socialLinks = '';
+		foreach ($this->config['footer_social'] as $link)
+		{
+			$socialLinks .= <<<HTML
 <a href="{$link['href']}">{$link['label']}</a>
 HTML;
-        }
+		}
 
-        return <<<HTML
+		return <<<HTML
 <footer>
 <div class="footer-section footer-info">
-    <a href="/">{$logo}</a>
-    <a href="mailto:znewton13@gmail.com">znewton13@gmail.com</a>
+	<a href="/">{$logo}</a>
+	<a href="mailto:znewton13@gmail.com">znewton13@gmail.com</a>
 </div>
 <div class="footer-section footer-social">
-    {$socialLinks}
+	{$socialLinks}
 </div>
 </footer>
 HTML;
