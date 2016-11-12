@@ -79,6 +79,26 @@ HTML;
 HTML;
     }
 
+    public function formSelectElement($title, $name, $options = [], $selectedOption=''){
+		$optionsStr = '';
+		foreach ($options as $value => $label)
+		{
+			$blank = $value == '' ? 'class="blank"' : '';
+			$selected = $selectedOption === $value ? 'selected' : '';
+			$optionsStr .= <<<HTML
+<option {$blank} value="{$value}" {$selected}>{$label}</option>
+HTML;
+		}
+    	return <<<HTML
+<div class="form-element-select">
+	<select name="{$name}">
+		{$optionsStr}
+	</select>
+	<div class="select-title">{$title}</div>
+</div>
+HTML;
+	}
+
     public function loadingBar(){
 
         return <<<HTML

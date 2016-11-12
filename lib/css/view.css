@@ -76,6 +76,9 @@ a {
 #navbar.scrolled div.left-nav{
     left: 5vw;
 }
+#navbar .a {
+    fill: #1da1f2;
+}
 #navbar a.home-link > svg > path{
     opacity: 1;
     transition: all 0.3s;
