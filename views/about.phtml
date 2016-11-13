@@ -4,7 +4,6 @@ $component = new ComponentRenderer();
 <h3>Loading</h3>
 <?= $component->loadingBar() ?>
 <h3>Forms</h3>
-<?= $component->formTextElement('Name', 'name', 'name') ?>
 <?= $component->formTextElement('Email', 'email', 'email', 'email') ?>
 <?= $component->formTextElement('Password', 'password', 'password', 'password') ?>
 <?= $component->formListElement('What is life?', 'checkbox', 'life', [
@@ -26,6 +25,7 @@ $component = new ComponentRenderer();
 	'jewish' => 'Judaism',
 	'muslim' => 'Islam',
 ], 'blue') ?>
+<?= $component->formTextElement('Favorite Number', 'number', 'number', 'number') ?>
 <?= $component->button('button','Submit', 'primary btn-block', ['style' => 'margin-top: 3vw;']) ?>
 
 <h3>Alerts</h3>

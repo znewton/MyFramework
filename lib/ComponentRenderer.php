@@ -23,10 +23,7 @@ HTML;
 	}
 
 	public function button($tag,$label,$type = 'default', $attributes = []){
-		$attrStr = '';
-		foreach ($attributes as $attr => $value){
-			$attrStr .= ' ' . $attr . '="' . $value . '"';
-		}
+		$attrStr = $this->AttributesToString($attributes);
 		return <<<HTML
 <{$tag} class="btn btn-{$type} clickable" {$attrStr}>{$label}</{$tag}>
 HTML;
@@ -34,15 +31,8 @@ HTML;
 
 	public function formTextElement($label,$name,$id,$type='text',$inline=false, $inputAttrs=[],$labelAttrs=[]){
 		$inline = ($inline) ? 'inline' : '';
-		$inputAttrStr = '';
-		foreach ($inputAttrs as $attr => $value)
-		{
-			$inputAttrStr .=  ' ' . $attr . '="' . $value . '"';
-		}
-		$labelAttrStr = '';
-		foreach ($labelAttrs as $attr => $value){
-			$labelAttrStr .=  ' ' . $attr . '="' . $value . '"';
-		}
+		$inputAttrStr = $this->AttributesToString($inputAttrs);
+		$labelAttrStr = $this->AttributesToString($labelAttrs);
 		$passwordToggle = '';
 		if($type=='password'){
 			$passwordToggle = '<span class="password-toggle clickable-text"></span>';
@@ -55,8 +45,8 @@ HTML;
 </div>
 HTML;
 	}
-
-	public function formListElement($title, $type, $name, $options = [], $checkedValue=''){
+//TODO: add ID and attributes
+	public function formListElement($title, $type, $name, $options = [], $checkedValue='', $attributes = []){
 		$optionsStr = '';
 		foreach ($options as $value => $label)
 		{
@@ -78,8 +68,8 @@ HTML;
 </div>
 HTML;
 	}
-
-	public function formSelectElement($title, $name, $options = [], $selectedOption=''){
+//TODO: Add ID and Attributes
+	public function formSelectElement($title, $name, $options = [], $selectedOption = '', $attributes = []){
 		$optionsStr = '';
 		foreach ($options as $value => $label)
 		{
@@ -99,11 +89,33 @@ HTML;
 HTML;
 	}
 
-	public function loadingBar(){
+	public function formRangeElement($label, $name, $id, $min, $max, $step = 1, $value = null, $attributes = [])
+	{
+		if($value == null){
+			$value = $min;
+		}
+		$attrStr = $this->AttributesToString($attributes);
+		return <<<HTML
+<div class="form-element-range">
+	<label for="{$id}">{$label}</label>
+	<input id="{$id}" name="{$name}" min="{$min}" max="{$max}" step="{$step}" value="{$value}" {$attrStr}>
+	<div id="" class="range-indicator"></div>
+</div>
+HTML;
+	}
 
+	public function loadingBar()
+	{
 		return <<<HTML
 <div class="loading-bar"></div>
 HTML;
+	}
 
+	private function AttributesToString($attributes){
+		$attrStr = '';
+		foreach ($attributes as $attr => $val){
+			$attrStr .= ' '.$attr.'="'.$val.'"';
+		}
+		return $attrStr;
 	}
 }

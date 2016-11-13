@@ -285,6 +285,7 @@ h3{
 	pointer-events: none;
 	z-index: 2;
 	border-bottom: 2px solid;
+	white-space: nowrap;
 	transition: all 0.3s;
 }
 .form-element-text input:focus + label,
@@ -469,6 +470,7 @@ span.password-toggle::before{
 	pointer-events: none;
 	z-index: 2;
 	border-bottom: 2px solid;
+	white-space: nowrap;
 	transition: all 0.3s;
 }
 .form-element-select select{
