@@ -2,6 +2,13 @@
 
 class ComponentRenderer
 {
+	/**
+	 * @param string $message
+	 * @param string $type
+	 * @param bool $clickable
+	 * @param string $description
+	 * @return string
+	 */
 	public function alert($message, $type = 'default', $clickable = false, $description = ''){
 		$alertCollapseAttrs = '';
 		$alertCollapsed = '';
@@ -22,6 +29,13 @@ HTML;
 HTML;
 	}
 
+	/**
+	 * @param string $tag
+	 * @param string $label
+	 * @param string $type
+	 * @param array $attributes
+	 * @return string
+	 */
 	public function button($tag,$label,$type = 'default', $attributes = []){
 		$attrStr = $this->AttributesToString($attributes);
 		return <<<HTML
@@ -29,6 +43,16 @@ HTML;
 HTML;
 	}
 
+	/**
+	 * @param $label
+	 * @param $name
+	 * @param $id
+	 * @param string $type
+	 * @param bool $inline
+	 * @param array $inputAttrs
+	 * @param array $labelAttrs
+	 * @return string
+	 */
 	public function formTextElement($label,$name,$id,$type='text',$inline=false, $inputAttrs=[],$labelAttrs=[]){
 		$inline = ($inline) ? 'inline' : '';
 		$inputAttrStr = $this->AttributesToString($inputAttrs);
@@ -46,6 +70,15 @@ HTML;
 HTML;
 	}
 //TODO: add ID and attributes
+	/**
+	 * @param string $title
+	 * @param string $type
+	 * @param string $name
+	 * @param array $options
+	 * @param string $checkedValue
+	 * @param array $attributes
+	 * @return string
+	 */
 	public function formListElement($title, $type, $name, $options = [], $checkedValue='', $attributes = []){
 		$optionsStr = '';
 		foreach ($options as $value => $label)
@@ -69,6 +102,14 @@ HTML;
 HTML;
 	}
 //TODO: Add ID and Attributes
+	/**
+	 * @param string $title
+	 * @param string $name
+	 * @param array $options
+	 * @param string $selectedOption
+	 * @param array $attributes
+	 * @return string
+	 */
 	public function formSelectElement($title, $name, $options = [], $selectedOption = '', $attributes = []){
 		$optionsStr = '';
 		foreach ($options as $value => $label)
@@ -89,6 +130,17 @@ HTML;
 HTML;
 	}
 
+	/**
+	 * @param string $label
+	 * @param string $name
+	 * @param string $id
+	 * @param int $min
+	 * @param int $max
+	 * @param int $step
+	 * @param null $value
+	 * @param array $attributes
+	 * @return string
+	 */
 	public function formRangeElement($label, $name, $id, $min, $max, $step = 1, $value = null, $attributes = [])
 	{
 		if($value == null){
@@ -98,12 +150,15 @@ HTML;
 		return <<<HTML
 <div class="form-element-range">
 	<label for="{$id}">{$label}</label>
-	<input id="{$id}" name="{$name}" min="{$min}" max="{$max}" step="{$step}" value="{$value}" {$attrStr}>
-	<div id="" class="range-indicator"></div>
+	<input id="{$id}" type="range" name="{$name}" min="{$min}" max="{$max}" step="{$step}" value="{$value}" {$attrStr}>
+	<div id="{$id}-range-ind" class="range-indicator"></div>
 </div>
 HTML;
 	}
 
+	/**
+	 * @return string
+	 */
 	public function loadingBar()
 	{
 		return <<<HTML
@@ -111,6 +166,10 @@ HTML;
 HTML;
 	}
 
+	/**
+	 * @param array $attributes
+	 * @return string
+	 */
 	private function AttributesToString($attributes){
 		$attrStr = '';
 		foreach ($attributes as $attr => $val){
