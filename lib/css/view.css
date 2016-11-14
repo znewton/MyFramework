@@ -31,7 +31,8 @@ a {
 }
 #navbar div.right-nav{
 	position: fixed;
-	right: 60px;
+	right: 30vw;
+	display: none;
 }
 #navbar a{
 	position: relative;
@@ -87,13 +88,40 @@ a {
 	opacity: 0;
 }
 
+@media  ( min-width: 628px){
+	#navbar {
+		height: 10vw;
+	}
+	#navbar a{
+		position: relative;
+		display: inline-block;
+		color: #3b3d4a;
+		font-size: 4vw;
+		line-height: 10vw;
+		padding: 0 2vw;
+	}
+	#navbar a.home-link{
+		font-size: 1.2em;
+		max-height: 10vw;
+		padding: 0 auto;
+		margin: 0 12.5vw;
+		line-height: 9vw;
+	}
+	#navbar a.home-link > svg{
+		width: 30vw;
+	}
+	#navbar.scrolled a.home-link{
+		width: 20vw;
+	}
+}
+
 
 #ham-menu {
 	position: fixed;
 	top: 0;
 	right: 0;
 	display: inline-block;
-	width: 20vw;
+	width: 15vw;
 	height: 15vw;
 	z-index: 1001;
 	overflow: hidden;
@@ -108,13 +136,13 @@ a {
 	display: block;
 	height: 2px;
 	width: 8vw;
-	left: 6vw;
+	left: 4.75vw;
 	transition: all 0.4s;
 	z-index: 10;
 }
-#ham-menu > span:nth-child(1) {  top: 3.5vw;  }
-#ham-menu > span:nth-child(2) {  top: 6.0vw;  }
-#ham-menu > span:nth-child(3) {  top: 8.5vw;  }
+#ham-menu > span:nth-child(1) {  top: 4vw;  }
+#ham-menu > span:nth-child(2) {  top: 7.0vw;  }
+#ham-menu > span:nth-child(3) {  top: 10vw;  }
 
 #ham-menu:hover{  cursor: pointer;  }
 #ham-menu.open > span { width: 9.5vw; top: 6.0vw;  }
@@ -122,6 +150,14 @@ a {
 #ham-menu.open > span:nth-child(2) {  opacity: 0;  }
 #ham-menu.open > span:nth-child(3) {  transform: rotate(-45deg);  }
 
+@media  ( min-width: 628px){
+	#ham-menu > span {  width: 7vw;  }
+	#ham-menu > span:nth-child(1) {  top: 2.25vw;  }
+	#ham-menu > span:nth-child(2) {  top: 4.75vw;  }
+	#ham-menu > span:nth-child(3) {  top: 7.25vw;  }
+
+	#ham-menu.open > span { width: 8vw; top: 4.75vw; left: 4.5vw; }
+}
 
 #drawer-indicator {
 	position: fixed;;
@@ -179,10 +215,25 @@ a {
 	background-color: #efefef;
 	color: #3b3d5a;
 }
-.right-nav{
-	display: none;
-}
 
+@media (min-width: 628px){
+	#drawer {
+		top: 10vw;
+		transition: right 0.45s ease;
+	}
+	#drawer.close{
+		animation: drawerClose 0.4s;
+	}
+	#drawer.open{
+		transition: right 0.45s ease;
+		animation: drawerOpen 0.75s;
+	}
+	#drawer a{
+		font-size: 1.3em;
+		padding-left: 12vw;
+		line-height: 10vw;
+	}
+}
 
 main {
 	padding: 15vw 5vw;
@@ -302,4 +353,22 @@ footer a[href *= 'twitter.com']::before{
 }
 footer a[href *= 'twitter.com']:hover::before{
 	color: #1da1f2;
+}
+
+@media (min-width: 628px){
+	footer {
+		padding: 2vw 0;
+	}
+	footer a::after{
+		left: 15%;
+	}
+	footer a:hover::after{
+		transition: all 0.45s ease;
+	}
+	footer a > svg{
+		width: 25vw;
+	}
+	footer a::before{
+		font-size: 1.2em;
+	}
 }
