@@ -149,7 +149,7 @@ HTML;
 		$attrStr = $this->AttributesToString($attributes);
 		return <<<HTML
 <div class="form-element-range">
-	<label for="{$id}">{$label}</label>
+	<label for="{$id}">{$label}: <span class="range-val"></span></label>
 	<input id="{$id}" type="range" name="{$name}" min="{$min}" max="{$max}" step="{$step}" value="{$value}" {$attrStr}>
 	<div id="{$id}-range-ind" class="range-indicator"></div>
 </div>

@@ -529,7 +529,125 @@ span.password-toggle::before{
 	color: #bbb;
 }
 
-/*------loading bar------*/
+.form-element-range {
+	position: relative;
+	display: block;
+	line-height: 7vw;
+	margin: 7vw 0 0 0;
+}
+.form-element-range label{
+	color: #888;
+}
+.form-element-range input[type=range]:focus + label{
+	color: #1da1f2;
+}
+.form-element-range input[type=range] {
+	-webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+	width: 100%; /* Specific width is required for Firefox. */
+	background: transparent; /* Otherwise white in Chrome */
+	line-height: 7vw;
+}
+
+.form-element-range input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
+
+.form-element-range input[type=range]:focus {
+	outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+.form-element-range input[type=range]::-ms-track {
+	width: 100%;
+	cursor: pointer;
+
+	/* Hides the slider so custom styles can be added */
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+/* Special styling for WebKit/Blink */
+.form-element-range input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: none;
+	height: 7vw;
+	width: 7vw;
+	border-radius: 50%;
+	background: #1da1f2;
+	cursor: pointer;
+	margin-top: -3.4vw; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+.form-element-range input[type=range]::-moz-range-thumb {
+	border: none;
+	height: 7vw;
+	width: 7vw;
+	border-radius: 50%;
+	background: #1da1f2;
+	cursor: pointer;
+}
+
+/* All the same stuff for IE */
+.form-element-range input[type=range]::-ms-thumb {
+	border: none;
+	height: 7vw;
+	width: 7vw;
+	border-radius: 50%;
+	background: #1da1f2;
+	cursor: pointer;
+}
+
+.form-element-range input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 1.5vw;
+	cursor: pointer;
+	background: #1da1f2;
+	border: none;
+}
+
+.form-element-range input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #367ebd;
+}
+
+.form-element-range input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	background: #3071a9;
+	border-radius: 1.3px;
+	border: 0.2px solid #010101;
+}
+
+.form-element-range input[type=range]::-ms-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	border-width: 16px 0;
+	color: transparent;
+}
+.form-element-range input[type=range]::-ms-fill-lower {
+	background: #2a6495;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.form-element-range input[type=range]:focus::-ms-fill-lower {
+	background: #3071a9;
+}
+.form-element-range input[type=range]::-ms-fill-upper {
+	background: #3071a9;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.form-element-range input[type=range]:focus::-ms-fill-upper {
+	background: #367ebd;
+}
+
+	/*------loading bar------*/
 .loading-bar{
 	position: relative;
 	display: block;
