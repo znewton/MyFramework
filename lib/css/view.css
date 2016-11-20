@@ -52,7 +52,7 @@ a {
 	-webkit-font-smoothing: antialiased;
 	white-space: nowrap;
 }
-#navbar a::before{
+#navbar a:not(.home-link)::before{
 	content: '';
 	position: absolute;
 	left: 0;
@@ -61,7 +61,7 @@ a {
 	height: 100%;
 	z-index: -2;
 }
-#navbar a::after{
+#navbar a:not(.home-link)::after{
 	content: '';
 	position: absolute;
 	left: 50%;
@@ -74,7 +74,7 @@ a {
 	opacity: 1;
 	transition: all 0s;
 }
-#navbar a:hover::before{
+#navbar a:not(.home-link):hover::before{
 	background-color: #efefef;
 	opacity: 0.6;
 	transition: all 0.6s;
@@ -168,12 +168,11 @@ a {
 	}
 	#navbar a{
 		font-size: 1em;
-		line-height: 70px;
+		line-height: 80px;
 		padding: 0 10px;
 	}
 	#navbar a:hover{
 		font-size: 1em;
-		line-height: 70px;
 		padding: 0 10px;
 	}
 	#navbar a.home-link{

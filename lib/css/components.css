@@ -413,21 +413,21 @@ span.password-toggle::before{
 }
 @media (min-width: 992px){
 	.form-element-text {
-		line-height: 7vw;
-		margin: 3vw 0 0 0;
+		line-height: 2em;
+		margin: 1em 0 0 0;
 	}
 	.form-element-text input{
-		line-height: 6vw;
+		line-height: 1.2em;
 	}
 	.form-element-text input + label{
-		line-height: 5vw;
+		line-height: 1em;
 	}
 	.form-element-text input:focus + label,
 	.form-element-text.has-text input + label{
-		padding-bottom: 5vw;
+		padding-bottom: 1.5em;
 	}
 	span.password-toggle::before{
-		line-height: 6vw;
+		line-height: 1.3em;
 	}
 }
 
@@ -611,62 +611,61 @@ span.password-toggle::before{
 }
 @media (min-width: 992px){
 	.form-element-list {
-		line-height: 7vw;
-		margin: 1vw 0 0 0;
+		line-height: 2em;
+		margin: 0.4em 0 0 0;
 	}
 	.form-element-list ul > li{
-		height: 7vw;
+		height: 2em;
 	}
 	.form-element-list ul > li::before{
-		height: 4.5vw;
-		width: 4.5vw;
-		margin: 1vw;
-		box-shadow: 0 0 0 0.2vw #bbb;
+		height: 1em;
+		width: 1em;
+		margin: 0.5em;
+		box-shadow: 0 0 0 0.05em #bbb;
 	}
 	.form-element-list ul > li > label {
-		line-height: 7vw;
-		vertical-align: middle;
-		padding-left: 8vw;
+		line-height: 2em;
+		padding-left: 2.5em;
 	}
 	.form-element-list ul > li > input + label::before {
-		margin: 3.25vw;
+		margin: 1em;
 	}
 	.form-element-list ul > li > input + label:hover::before {
-		margin:1.75vw;
-		width: 3vw;
-		height: 3vw;
+		margin:0.65em;
+		width: 0.7em;
+		height: 0.7em;
 	}
 	.form-element-list ul > li > input:checked + label::before {
-		margin: 3.25vw;
+		margin: 1em;
 		width: 0;
 		height: 0;
 	}
 	.form-element-list ul > li > input + label::after {
-		margin:3.25vw;
+		margin:1em;
 		width: 0;
 		height: 0;
 	}
 	.form-element-list ul > li > input:checked + label::after {
-		margin:1.75vw;
-		width: 3vw;
-		height: 3vw;
+		margin:0.65em;
+		width: 0.7em;
+		height: 0.7em;
 		animation: check-checkbox 0.175s ease;
 	}
 	@keyframes check-checkbox {
 		0%{
-			margin:3.25vw;
+			margin:1em;
 			width: 0;
 			height: 0;
 		}
 		75%{
-			margin:1vw;
-			width: 4.5vw;
-			height: 4.5vw;
+			margin:0.5em;
+			width: 1em;
+			height: 1em;
 		}
 		100%{
-			margin:1.5vw;
-			width: 3.5vw;
-			height: 3.5vw;
+			margin:0.65em;
+			width: 0.7em;
+			height: 0.7em;
 		}
 	}
 }
@@ -762,12 +761,8 @@ span.password-toggle::before{
 	.form-element-select select{
 		line-height: 6vw;
 	}
-	.form-element-select select:focus + div.select-title{
-		color: #888;
-	}
 	.form-element-select.has-value select + div.select-title{
 		padding-bottom: 5vw;
-		color: #1da1f2;
 	}
 	.form-element-select::after{
 		line-height: 5vw;
@@ -775,24 +770,22 @@ span.password-toggle::before{
 }
 @media (min-width: 992px){
 	.form-element-select {
-		line-height: 7vw;
-		margin: 3vw 0 0 0;
+		line-height: 2em;
+		margin: 0.4em 0 0 0;
 	}
 	.form-element-select .select-title{
-		line-height: 5vw;
+		line-height: 1em;
 	}
 	.form-element-select select{
-		line-height: 6vw;
-	}
-	.form-element-select select:focus + div.select-title{
-		color: #888;
+		line-height: 1.2em;
 	}
 	.form-element-select.has-value select + div.select-title{
-		padding-bottom: 5vw;
-		color: #1da1f2;
+		padding-bottom: 1.5em;
 	}
 	.form-element-select::after{
-		line-height: 5vw;
+		line-height: 1.5em;
+		right: 1em;
+		font-size: 0.7em;
 	}
 }
 
@@ -955,12 +948,12 @@ span.password-toggle::before{
 }
 @media (min-width: 992px) {
 	.form-element-range {
-		line-height: 4vw;
-		margin: 3vw 0 0 0;
+		line-height: 1em;
+		margin: 1em 0 0 0;
 	}
 	.form-element-range input[type=range] {
 		width: 100%; /* Specific width is required for Firefox. */
-		line-height: 4vw;
+		line-height: 1em;
 	}
 
 	.form-element-range input[type=range]::-ms-track {
@@ -969,26 +962,26 @@ span.password-toggle::before{
 	/* Special styling for WebKit/Blink */
 	.form-element-range input[type=range]::-webkit-slider-thumb {
 		border: none;
-		height: 4vw;
-		width: 4vw;
-		margin-top: -1.8vw; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+		height: 2em;
+		width: 2em;
+		margin-top: -0.8em; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 	}
 
 	/* All the same stuff for Firefox */
 	.form-element-range input[type=range]::-moz-range-thumb {
-		height: 4vw;
-		width: 4vw;
+		height: 2em;
+		width: 2em;
 	}
 
 	/* All the same stuff for IE */
 	.form-element-range input[type=range]::-ms-thumb {
-		height: 4vw;
-		width: 4vw;
+		height: 2em;
+		width: 2em;
 	}
 
 	.form-element-range input[type=range]::-webkit-slider-runnable-track {
 		width: 100%;
-		height: 0.7vw;
+		height: 0.5em;
 	}
 
 }
