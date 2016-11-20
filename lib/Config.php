@@ -4,19 +4,16 @@ class Config
 {
 	private $routeConfig = [
 		'test' => [
-			'uri' => '',
 			'action' => [
 				'view' => 'test.html',
 			],
 		],
 		'about' => [
-			'uri' => '',
 			'action' => [
 				'view' => 'about.phtml',
 			],
 		],
 		'components' => [
-			'uri' => '',
 			'action' => [
 				'view' => 'components.phtml',
 			],
