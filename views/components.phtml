@@ -1,0 +1,44 @@
+<?php
+$component = new ComponentRenderer();
+?>
+<h3>Loading</h3>
+<?= $component->loadingBar() ?>
+<h3>Forms</h3>
+<?= $component->formTextElement('Email', 'email', 'email', 'email') ?>
+<?= $component->formTextElement('Password', 'password', 'password', 'password') ?>
+<?= $component->formListElement('What is life?', 'checkbox', 'life', [
+	'42' => '42',
+	'happy' => 'Happiness',
+	'love' => 'Love',
+	'siliconValley' => 'Silicon Valley',
+], 'siliconValley') ?>
+<?= $component->formListElement('Favorite Color?', 'radio', 'color', [
+	'blue' => 'Blue',
+	'red' => 'Red',
+	'yellow' => 'Yellow',
+	'green' => 'Green',
+], 'blue') ?>
+<?= $component->formSelectElement('Religion?', 'religion', [
+	'' => 'Choose a Religion...',
+	'buddhist' => 'Buddhism',
+	'christian' => 'Christianity',
+	'jewish' => 'Judaism',
+	'muslim' => 'Islam',
+], 'blue') ?>
+<?= $component->formTextElement('Favorite Number', 'number', 'number', 'number') ?>
+<?= $component->formRangeElement('Satisfaction', 'satisfaction', 'satisfaction', 0, 10) ?>
+<?= $component->button('button','Submit', 'primary btn-block', ['style' => 'margin-top: 3vw;']) ?>
+
+<h3>Alerts</h3>
+<?= $component->alert('Default alert', 'default') ?>
+<?= $component->alert('Warning alert', 'warning',true, 'This is a description') ?>
+<?= $component->alert('Info alert', 'info') ?>
+<?= $component->alert('Error alert', 'error') ?>
+<?= $component->alert('Success alert', 'success') ?>
+
+<h3>Buttons</h3>
+<?= $component->button('button','Button', 'default') ?>
+<?= $component->button('button','Button', 'primary') ?>
+<?= $component->button('button','Button', 'warning') ?>
+<?= $component->button('button','Button', 'danger') ?>
+<?= $component->button('button','Button', 'success') ?>

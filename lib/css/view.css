@@ -241,12 +241,17 @@ main {
 }
 
 @media (min-width: 992px){
-	#drawer {
-		width: 280px;
-		left: -280px;
+	main{
+		width: 992px;
+		margin: auto;
 	}
-	#ham-menu.open {
-		left: 280px;
+	#drawer {
+		width: 480px;
+		right: -480px;
+	}
+	@keyframes drawerClose {
+		from {right: 0;}
+		to {right: -480px;}
 	}
 }
 

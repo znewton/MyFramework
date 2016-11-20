@@ -15,6 +15,12 @@ class Config
 				'view' => 'about.phtml',
 			],
 		],
+		'components' => [
+			'uri' => '',
+			'action' => [
+				'view' => 'components.phtml',
+			],
+		],
 		'testRest' => [
 			'uri' => '',
 			'action' => [
@@ -58,6 +64,10 @@ class Config
 			'about' => [
 				'label' => 'About',
 				'href' => '/about'
+			],
+			'components' => [
+				'label' => 'Components',
+				'href' => '/components'
 			],
 			'test' => [
 				'label' => 'Test',
