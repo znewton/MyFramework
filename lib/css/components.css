@@ -88,17 +88,17 @@ h3{
 @media (min-width: 992px){
 	.alert{
 		line-height: unset;
-		margin-top: 1vw;
-		padding: 1.2vw 1.6vw;
+		margin-top: 0.3em;
+		padding: 0.3em 0.5em;
 		box-sizing: border-box;
 	}
 	.alert > i {
 		opacity: 0.7;
-		padding: 0 0.5vw 0 0;
+		padding: 0 0.3em 0 0;
 	}
 	.alert-description{
 		font-size: 0.75em;
-		padding: 0.5vw 0 0 4vw;
+		padding: 0.2em 0 0 1em;
 	}
 }
 
@@ -281,12 +281,12 @@ h3{
 @media (min-width: 992px) {
 	.btn {
 		line-height: unset;
-		min-width: 10vw;
-		padding: 1.2vw 1.6vw;
-		margin: 0.5vw;
+		min-width: 5em;
+		padding: 0.3em 0.5em;
+		margin: 0.1em;
 	}
 	.btn-block {
-		margin: 0.5vw 0;
+		margin: 0.1em 0;
 	}
 }
 
@@ -301,6 +301,13 @@ h3{
 .collapse-toggle.collapsed{
 	max-height:0;
 	transition: max-height 0.3s;
+}
+
+@media (min-width: 992px){
+	.collapse-toggle:not(.collapsed){
+		max-height:5em;
+		transition: max-height 0.3s;
+	}
 }
 
 /*-----Forms------*/
