@@ -156,6 +156,10 @@ HTML;
 HTML;
 	}
 
+	public function hero(){
+		return '';
+	}
+
 	/**
 	 * @return string
 	 */
