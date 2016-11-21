@@ -157,7 +157,25 @@ HTML;
 HTML;
 	}
 
+	/**
+	 * @param string|array $src
+	 * @param string $header
+	 * @param string $subHeader
+	 * @param string $others
+	 * @return string
+	 */
 	public function hero($src, $header = '', $subHeader = '', $others = ''){
+		$img = '';
+		if (is_string($src))
+		{
+			$img = '<img src="'.$src.'">';
+		}
+		else if (is_array($src))
+		{
+			foreach ($src as $class => $link) {
+				$img .= '<img src="'.$link.'" class="'.$class.'">';
+			}
+		}
 		return <<<HTML
 <div class="hero">
 	<img src="{$src}">
