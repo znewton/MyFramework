@@ -17,6 +17,8 @@
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 	transition: text-shadow 0.2s;
 }
+/*!-----Clickable-----!*/
+
 /*-----Alerts------*/
 .alert{
 	display: block;
@@ -29,6 +31,7 @@
 	line-height: 10vw;
 	vertical-align: middle;
 	margin-top: 2vw;
+	z-index: 0;
 }
 .alert > i {
 	opacity: 0.7;
@@ -150,6 +153,7 @@
 .alert-success.clickable::after{
 	background-color: #d6e9c6;
 }
+/*!-----Alerts------!*/
 
 /*-----Buttons-----*/
 .btn {
@@ -165,6 +169,7 @@
 	color: #fff;
 	transition: all 0.3s;
 	overflow: hidden;
+	z-index: 0;
 }
 .btn-block{
 	display: block;
@@ -280,6 +285,7 @@
 		margin: 0.1em 0;
 	}
 }
+/*!-----Buttons-----!*/
 
 /*----Collapse----*/
 .collapse-toggle{
@@ -983,9 +989,10 @@ span.password-toggle::before{
 	}
 
 }
+/*!-----Forms------!*/
 
 
-	/*------loading bar------*/
+/*------loading bar------*/
 .loading-bar{
 	position: relative;
 	display: block;
@@ -1066,3 +1073,98 @@ span.password-toggle::before{
 		62% {opacity: 0.1;width: 5px; }
 	}
 }
+/*!------loading bar------!*/
+
+/*------Modal----------*/
+.modal-wrapper{
+	z-index: 2000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+	box-sizing: border-box;
+}
+.modal {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	background-color: #efefef;
+	box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
+}
+.modal-closer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	height: 10vh;
+	width: 10vh;
+	line-height: 10vh;
+	border: none;
+	background-color: transparent;
+	font-size: 1em;
+	color: #555;
+}
+.modal-closer:hover{
+	color: #000;
+	cursor: pointer;
+}
+.modal-header {
+	padding: 0 5vw;
+	height: 10vh;
+	vertical-align: middle;
+	font-size: 1.2em;
+	line-height: 15vw;
+	border-bottom: 1px solid #ddd;
+}
+.modal-body{
+	padding: 10px 20px;
+	height: 75vh;
+	box-sizing: border-box;
+	overflow-y: auto;
+	border-bottom: 1px solid #ddd;
+}
+.modal-footer{
+	height: 15vh;
+	padding: 10px 20px;
+}
+
+.modal-wrapper.open{
+	display: block;
+}
+.modal-wrapper.closed{
+	display: none;
+}
+
+@media (min-width: 992px){
+	.modal {
+		width: 992px;
+		margin: 90px auto;
+		height: unset;
+	}
+	.modal-closer {
+		height: 50px;
+		width: 50px;
+		line-height: 30px;
+		font-size: 1em;
+	}
+	.modal-header {
+		padding: 0 20px;
+		height: 50px;
+		font-size: 1.2em;
+		line-height: 50px;
+	}
+	.modal-body{
+		max-height: 90%;
+		height: unset;
+		padding: 10px 20px;
+	}
+	.modal-footer{
+		height: unset;
+		padding: 10px 20px;
+	}
+}
+
+/*!------Modal----------!*/

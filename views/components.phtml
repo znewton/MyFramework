@@ -1,8 +1,21 @@
 <?php
 $component = new ComponentRenderer();
 ?>
+<h3>Modal</h3>
+<?php
+$header = 'Test Modal';
+$body = <<<HTML
+{$component->formTextElement("Test Form", 'test', 'test', 'test')}
+HTML;
+$footer = <<<HTML
+{$component->button('button','Submit', 'success')}
+HTML;
+echo $component->modal('testModal',$header,$body,$footer,'Open Test Modal', 'primary');
+?>
+
 <h3>Loading</h3>
 <?= $component->loadingBar() ?>
+
 <h3>Forms</h3>
 <?= $component->formTextElement('Email', 'email', 'email', 'email') ?>
 <?= $component->formTextElement('Password', 'password', 'password', 'password') ?>

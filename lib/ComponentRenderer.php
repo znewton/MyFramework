@@ -162,6 +162,30 @@ HTML;
 	}
 
 	/**
+	 * @param $name
+	 * @param $header
+	 * @param $body
+	 * @param $footer
+	 * @param $buttonLabel
+	 * @param $buttonType
+	 * @return string
+	 */
+	public function modal($name, $header, $body, $footer, $buttonLabel, $buttonType){
+
+		return <<<HTML
+<div id="modal_{$name}" class="modal-wrapper closed">
+	<div class="modal">
+		<button class="modal-closer" onclick="closeModal('modal_{$name}')" aria-label="Close Modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+		<div class="modal-header">{$header}</div>
+		<div class="modal-body">{$body}</div>
+		<div class="modal-footer">{$footer}</div>
+	</div>
+</div>
+<button onclick="openModal('modal_{$name}')" class="btn btn-{$buttonType} clickable" aria-haspopup="true">{$buttonLabel}</button>
+HTML;
+	}
+
+	/**
 	 * @return string
 	 */
 	public function loadingBar()
@@ -182,4 +206,5 @@ HTML;
 		}
 		return $attrStr;
 	}
+
 }
