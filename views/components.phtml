@@ -27,7 +27,7 @@ $component = new ComponentRenderer();
 ], 'blue') ?>
 <?= $component->formTextElement('Favorite Number', 'number', 'number', 'number') ?>
 <?= $component->formRangeElement('Satisfaction', 'satisfaction', 'satisfaction', 0, 10) ?>
-<?= $component->button('button','Submit', 'primary btn-block', ['style' => 'margin-top: 3vw;']) ?>
+<?= $component->button('button','Submit', 'primary btn-block', null, ['style' => 'margin-top: 3vw;']) ?>
 
 <h3>Alerts</h3>
 <?= $component->alert('Default alert', 'default') ?>

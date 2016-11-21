@@ -36,10 +36,11 @@ HTML;
 	 * @param array $attributes
 	 * @return string
 	 */
-	public function button($tag,$label,$type = 'default', $attributes = []){
+	public function button($tag,$label,$type = 'default', $icon = null, $attributes = []){
 		$attrStr = $this->AttributesToString($attributes);
+		$icon = ($icon) ? '<i class="fa fa-'.$icon.'" aria-hidden="true"></i> ' : '';
 		return <<<HTML
-<{$tag} class="btn btn-{$type} clickable" {$attrStr}>{$label}</{$tag}>
+<{$tag} class="btn btn-{$type} clickable" {$attrStr}>{$icon}{$label}</{$tag}>
 HTML;
 	}
 
