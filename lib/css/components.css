@@ -837,21 +837,21 @@ span.password-toggle::before{
 .hero {
 	position: relative;
 	top: -15vw;
-	width: 99vw;
+	width: 100vw;
 	box-sizing: border-box;
 	overflow: hidden;
 }
 .hero > img {
 	position: relative;
-	left: -20vw;
-	width: 140vw;
+	left: -60vw;
+	width: 220vw;
 	filter: blur(1px) brightness(90%);
 }
 .hero > .hero-content{
 	text-align: center;
 	position: absolute;
 	width: 100%;
-	top: 20%;
+	top: 17vw;
 }
 .hero > .hero-content > div{
 	display: inline-block;
@@ -861,26 +861,45 @@ span.password-toggle::before{
 	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 .hero-header {
-	font-size: 4em;
+	font-size: 2.5em;
 	font-weight: 700;
 }
 .hero-sub-header{
 	color: #fafafa;
-	font-size: 2em;
+	font-size: 1.5em;
+	line-height: 1.4em;
 	font-weight: 400;
 }
 .hero-others{
 	color: #fafafa;
-	font-size: 1.5em;
+	line-height: 1.2em;
+	font-size: 1em;
 	font-weight: 300;
 }
 @media (min-width: 992px) {
 	.hero {
 		top: -90px;
+		width: 100vw;
 	}
 	.hero > img {
 		left: 0;
 		width: 100%;
+	}
+	.hero > .hero-content{
+		width: 100%;
+		top: 20%;
+	}
+	.hero > .hero-content > div{
+		color: #fff;
+	}
+	.hero-header {
+		font-size: 4em;
+	}
+	.hero-sub-header{
+		font-size: 2em;
+	}
+	.hero-others{
+		font-size: 1.5em;
 	}
 }
 
