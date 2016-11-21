@@ -28,14 +28,16 @@
 	color: #555;
 	border-color: #ddd;
 	border-radius: 0;
-	line-height: 10vw;
+	line-height: 1em;
 	vertical-align: middle;
-	margin-top: 2vw;
+	margin-top: 0.3em;
+	padding: 0.3em 0.5em;
 	z-index: 0;
+	box-sizing: border-box;
 }
 .alert > i {
 	opacity: 0.7;
-	padding: 0 2vw;
+	padding: 0 0.3em 0 0;
 }
 
 .alert-warning{
@@ -60,40 +62,7 @@
 }
 .alert-description{
 	font-size: 0.75em;
-	padding: 0 3vw;
-}
-
-@media (min-width: 628px){
-	.alert{
-		line-height: unset;
-		margin-top: 1vw;
-		padding: 1.2vw 1.6vw;
-		box-sizing: border-box;
-	}
-	.alert > i {
-		opacity: 0.7;
-		padding: 0 0.5vw 0 0;
-	}
-	.alert-description{
-		font-size: 0.75em;
-		padding: 0.5vw 0 0 4vw;
-	}
-}
-@media (min-width: 992px){
-	.alert{
-		line-height: unset;
-		margin-top: 0.3em;
-		padding: 0.3em 0.5em;
-		box-sizing: border-box;
-	}
-	.alert > i {
-		opacity: 0.7;
-		padding: 0 0.3em 0 0;
-	}
-	.alert-description{
-		font-size: 0.75em;
-		padding: 0.2em 0 0 1em;
-	}
+	padding: 0.2em 0 0 1em;
 }
 
 .alert.clickable{
@@ -159,22 +128,23 @@
 .btn {
 	display: inline-block;
 	position: relative;
-	line-height: 10vw;
-	min-width: 10vw;
+	line-height: 1em;
 	vertical-align: middle;
 	border: 1px solid;
-	margin: 1vw;
 	font-size: 1em;
 	background-color: transparent;
 	color: #fff;
 	transition: all 0.3s;
 	overflow: hidden;
 	z-index: 0;
+	min-width: 5em;
+	padding: 0.3em 0.5em;
+	margin: 0.1em;
 }
 .btn-block{
 	display: block;
 	width: 100%;
-	margin: 1vw 0;
+	margin: 0.1em 0;
 }
 .btn:focus{
 	outline: none;
@@ -261,30 +231,6 @@
 .btn-success::before {
 	background-color: #dff0d8;
 }
-
-@media (min-width: 628px) {
-	.btn {
-		line-height: unset;
-		min-width: 10vw;
-		padding: 1.2vw 1.6vw;
-		margin: 0.5vw;
-	}
-	.btn-block {
-		margin: 0.5vw 0;
-	}
-}
-
-@media (min-width: 992px) {
-	.btn {
-		line-height: unset;
-		min-width: 5em;
-		padding: 0.3em 0.5em;
-		margin: 0.1em;
-	}
-	.btn-block {
-		margin: 0.1em 0;
-	}
-}
 /*!-----Buttons-----!*/
 
 /*----Collapse----*/
@@ -312,8 +258,8 @@
 .form-element-text {
 	position: relative;
 	display: block;
-	line-height: 15vw;
-	margin: 3vw 0 0 0;
+	line-height: 1em;
+	margin: 1em 0 0 0;
 }
 .form-element-text input{
 	position: relative;
@@ -325,7 +271,7 @@
 	border-bottom: 1px solid #bbb;
 	z-index: 1;
 	vertical-align: bottom;
-	line-height: 9vw;
+	line-height: 1.2em;
 	overflow: hidden;
 	background: transparent;
 	transition: border-bottom-color 0.5s;
@@ -343,7 +289,7 @@
 	bottom: 0;
 	left: 0;
 	width: 0;
-	line-height: 8vw;
+	line-height: 1em;
 	padding-bottom: 0;
 	pointer-events: none;
 	z-index: 2;
@@ -353,7 +299,7 @@
 }
 .form-element-text input:focus + label,
 .form-element-text.has-text input + label{
-	padding-bottom: 7vw;
+	padding-bottom: 1.5em;
 	font-size: 0.8em;
 	color: #1da1f2;
 }
@@ -382,7 +328,7 @@ span.password-toggle::before{
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	line-height: 9vw;
+	line-height: 1.2em;
 	font-family: FontAwesome;
 }
 .form-element-text.has-text input[type=password] + label + span.password-toggle::before{
@@ -396,51 +342,12 @@ span.password-toggle::before{
 	color: #333;
 }
 
-@media (min-width: 628px){
-	.form-element-text {
-		line-height: 7vw;
-		margin: 3vw 0 0 0;
-	}
-	.form-element-text input{
-		line-height: 6vw;
-	}
-	.form-element-text input + label{
-		line-height: 5vw;
-	}
-	.form-element-text input:focus + label,
-	.form-element-text.has-text input + label{
-		padding-bottom: 5vw;
-	}
-	span.password-toggle::before{
-		line-height: 6vw;
-	}
-}
-@media (min-width: 992px){
-	.form-element-text {
-		line-height: 2em;
-		margin: 1em 0 0 0;
-	}
-	.form-element-text input{
-		line-height: 1.2em;
-	}
-	.form-element-text input + label{
-		line-height: 1em;
-	}
-	.form-element-text input:focus + label,
-	.form-element-text.has-text input + label{
-		padding-bottom: 1.5em;
-	}
-	span.password-toggle::before{
-		line-height: 1.3em;
-	}
-}
-
 /*List*/
 .form-element-list {
 	position: relative;
 	display: block;
-	line-height: 10vw;
-	margin: 3vw 0 0 0;
+	line-height: 1.5em;
+	margin: 0.4em 0 0 0;
 }
 .form-element-list ul{
 	list-style: none;
@@ -450,7 +357,7 @@ span.password-toggle::before{
 .form-element-list ul > li{
 	display: block;
 	position: relative;
-	height: 10vw;
+	height: 1.5em;
 }
 .form-element-list ul > li::before{
 	position: absolute;
@@ -458,22 +365,22 @@ span.password-toggle::before{
 	left: 0;
 	top: 0;
 	content: '';
-	height: 6.5vw;
-	width: 6.5vw;
-	margin: 1.5vw;
-	box-shadow: 0 0 0 0.35vw #bbb;
+	height: 1em;
+	width: 1em;
+	margin: 0.5em;
+	box-shadow: 0 0 0 0.05em #bbb;
 }
 .form-element-list ul > li > label {
 	position: absolute;
 	top: 0;
 	left: 0;
 	display: inline-block;
-	line-height: 10vw;
 	vertical-align: top;
-	padding-left: 11.4vw;
 	box-sizing: border-box;
 	width: 100%;
 	max-width: 100%;
+	line-height: 2em;
+	padding-left: 2.5em;
 }
 .form-element-list ul > li > label:hover{
 	cursor: pointer;
@@ -485,20 +392,20 @@ span.password-toggle::before{
 	content: '';
 	top: 0;
 	left: 0;
-	margin: 4.75vw;
+	margin: 1em;
 	width: 0;
 	height: 0;
 	opacity: 0.15;
 	transition: all 0.17s ease;
 }
 .form-element-list ul > li > input + label:hover::before {
-	margin:2.5vw;
-	width: 4.5vw;
-	height: 4.5vw;
+	margin:0.65em;
+	width: 0.7em;
+	height: 0.7em;
 	background-color: #1da1f2;
 }
 .form-element-list ul > li > input:checked + label::before {
-	margin: 4.75vw;
+	margin: 1em;
 	width: 0;
 	height: 0;
 	opacity: 0;
@@ -511,33 +418,33 @@ span.password-toggle::before{
 	content: '';
 	top: 0;
 	left: 0;
-	margin:4.75vw;
+	margin:1em;
 	width: 0;
 	height: 0;
 	z-index: 1;
 	transition: all 0.2s ease;
 }
 .form-element-list ul > li > input:checked + label::after {
-	margin:2.5vw;
-	width: 4.5vw;
-	height: 4.5vw;
+	margin:0.65em;
+	width: 0.7em;
+	height: 0.7em;
 	animation: check-checkbox 0.25s ease;
 }
 @keyframes check-checkbox {
 	0%{
-		margin:4.75vw;
+		margin:1em;
 		width: 0;
 		height: 0;
 	}
 	75%{
-		margin:1.5vw;
-		width: 6.5vw;
-		height: 6.5vw;
+		margin:0.5em;
+		width: 1em;
+		height: 1em;
 	}
 	100%{
-		margin:2.5vw;
-		width: 4.5vw;
-		height: 4.5vw;
+		margin:0.65em;
+		width: 0.7em;
+		height: 0.7em;
 	}
 }
 .form-element-list input{
@@ -552,134 +459,12 @@ span.password-toggle::before{
 	color: #888;
 }
 
-@media (min-width: 628px){
-	.form-element-list {
-		line-height: 7vw;
-		margin: 1vw 0 0 0;
-	}
-	.form-element-list ul > li{
-		height: 7vw;
-	}
-	.form-element-list ul > li::before{
-		height: 4.5vw;
-		width: 4.5vw;
-		margin: 1vw;
-		box-shadow: 0 0 0 0.2vw #bbb;
-	}
-	.form-element-list ul > li > label {
-		line-height: 7vw;
-		vertical-align: middle;
-		padding-left: 8vw;
-	}
-	.form-element-list ul > li > input + label::before {
-		margin: 3.25vw;
-	}
-	.form-element-list ul > li > input + label:hover::before {
-		margin:1.75vw;
-		width: 3vw;
-		height: 3vw;
-	}
-	.form-element-list ul > li > input:checked + label::before {
-		margin: 3.25vw;
-		width: 0;
-		height: 0;
-	}
-	.form-element-list ul > li > input + label::after {
-		margin:3.25vw;
-		width: 0;
-		height: 0;
-	}
-	.form-element-list ul > li > input:checked + label::after {
-		margin:1.75vw;
-		width: 3vw;
-		height: 3vw;
-		animation: check-checkbox 0.175s ease;
-	}
-	@keyframes check-checkbox {
-		0%{
-			margin:3.25vw;
-			width: 0;
-			height: 0;
-		}
-		75%{
-			margin:1vw;
-			width: 4.5vw;
-			height: 4.5vw;
-		}
-		100%{
-			margin:1.5vw;
-			width: 3.5vw;
-			height: 3.5vw;
-		}
-	}
-}
-@media (min-width: 992px){
-	.form-element-list {
-		line-height: 2em;
-		margin: 0.4em 0 0 0;
-	}
-	.form-element-list ul > li{
-		height: 2em;
-	}
-	.form-element-list ul > li::before{
-		height: 1em;
-		width: 1em;
-		margin: 0.5em;
-		box-shadow: 0 0 0 0.05em #bbb;
-	}
-	.form-element-list ul > li > label {
-		line-height: 2em;
-		padding-left: 2.5em;
-	}
-	.form-element-list ul > li > input + label::before {
-		margin: 1em;
-	}
-	.form-element-list ul > li > input + label:hover::before {
-		margin:0.65em;
-		width: 0.7em;
-		height: 0.7em;
-	}
-	.form-element-list ul > li > input:checked + label::before {
-		margin: 1em;
-		width: 0;
-		height: 0;
-	}
-	.form-element-list ul > li > input + label::after {
-		margin:1em;
-		width: 0;
-		height: 0;
-	}
-	.form-element-list ul > li > input:checked + label::after {
-		margin:0.65em;
-		width: 0.7em;
-		height: 0.7em;
-		animation: check-checkbox 0.175s ease;
-	}
-	@keyframes check-checkbox {
-		0%{
-			margin:1em;
-			width: 0;
-			height: 0;
-		}
-		75%{
-			margin:0.5em;
-			width: 1em;
-			height: 1em;
-		}
-		100%{
-			margin:0.65em;
-			width: 0.7em;
-			height: 0.7em;
-		}
-	}
-}
-
 /*Select*/
 .form-element-select {
 	position: relative;
 	display: block;
-	line-height: 15vw;
-	margin: 3vw 0 0 0;
+	line-height: 2em;
+	margin: 0.4em 0 0 0;
 }
 .form-element-select .select-title{
 	position: absolute;
@@ -690,7 +475,7 @@ span.password-toggle::before{
 	bottom: 0;
 	left: 0;
 	width: 0;
-	line-height: 8vw;
+	line-height: 1.2em;
 	padding-bottom: 0;
 	pointer-events: none;
 	z-index: 2;
@@ -710,7 +495,7 @@ span.password-toggle::before{
 	border-bottom: 1px solid #bbb;
 	z-index: 1;
 	vertical-align: bottom;
-	line-height: 9vw;
+	line-height: 1.2em;
 	overflow: hidden;
 	background: transparent;
 	transition: border-bottom-color 0.5s;
@@ -719,7 +504,7 @@ span.password-toggle::before{
 	color: #888;
 }
 .form-element-select.has-value select + div.select-title{
-	padding-bottom: 7vw;
+	padding-bottom: 1.5em;
 	font-size: 0.8em;
 	color: #1da1f2;
 	width: 100%;
@@ -737,8 +522,8 @@ span.password-toggle::before{
 	font-size: 0.7em;
 	color: #bbb;
 	position: absolute;
-	line-height: 10vw;
-	right: 2vw;
+	line-height: 1.5em;
+	right: 1em;
 	bottom: 0;
 }
 .form-element-select.has-value::after{
@@ -754,51 +539,13 @@ span.password-toggle::before{
 	color: #bbb;
 }
 
-@media (min-width: 628px){
-	.form-element-select {
-		line-height: 7vw;
-		margin: 3vw 0 0 0;
-	}
-	.form-element-select .select-title{
-		line-height: 5vw;
-	}
-	.form-element-select select{
-		line-height: 6vw;
-	}
-	.form-element-select.has-value select + div.select-title{
-		padding-bottom: 5vw;
-	}
-	.form-element-select::after{
-		line-height: 5vw;
-	}
-}
-@media (min-width: 992px){
-	.form-element-select {
-		line-height: 2em;
-		margin: 0.4em 0 0 0;
-	}
-	.form-element-select .select-title{
-		line-height: 1em;
-	}
-	.form-element-select select{
-		line-height: 1.2em;
-	}
-	.form-element-select.has-value select + div.select-title{
-		padding-bottom: 1.5em;
-	}
-	.form-element-select::after{
-		line-height: 1.5em;
-		right: 1em;
-		font-size: 0.7em;
-	}
-}
 
 /*Range*/
 .form-element-range {
 	position: relative;
 	display: block;
-	line-height: 7vw;
-	margin: 7vw 0 0 0;
+	line-height: 1em;
+	margin: 1em 0 0 0;
 }
 .form-element-range label{
 	color: #888;
@@ -810,7 +557,7 @@ span.password-toggle::before{
 	-webkit-appearance: none; /* Hides the slider so that custom slider can be made */
 	width: 100%; /* Specific width is required for Firefox. */
 	background: transparent; /* Otherwise white in Chrome */
-	line-height: 7vw;
+	line-height: 1em;
 }
 
 .form-element-range input[type=range]::-webkit-slider-thumb {
@@ -834,19 +581,19 @@ span.password-toggle::before{
 .form-element-range input[type=range]::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	border: none;
-	height: 7vw;
-	width: 7vw;
 	border-radius: 50%;
 	background: #1da1f2;
 	cursor: pointer;
-	margin-top: -3.4vw; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+	height: 2em;
+	width: 2em;
+	margin-top: -0.8em; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }
 
 /* All the same stuff for Firefox */
 .form-element-range input[type=range]::-moz-range-thumb {
 	border: none;
-	height: 7vw;
-	width: 7vw;
+	height: 2em;
+	width: 2em;
 	border-radius: 50%;
 	background: #1da1f2;
 	cursor: pointer;
@@ -855,8 +602,8 @@ span.password-toggle::before{
 /* All the same stuff for IE */
 .form-element-range input[type=range]::-ms-thumb {
 	border: none;
-	height: 7vw;
-	width: 7vw;
+	height: 2em;
+	width: 2em;
 	border-radius: 50%;
 	background: #1da1f2;
 	cursor: pointer;
@@ -864,14 +611,10 @@ span.password-toggle::before{
 
 .form-element-range input[type=range]::-webkit-slider-runnable-track {
 	width: 100%;
-	height: 1.5vw;
+	height: 0.5em;
 	cursor: pointer;
 	background: #1da1f2;
 	border: none;
-}
-
-.form-element-range input[type=range]:focus::-webkit-slider-runnable-track {
-	background: #367ebd;
 }
 
 .form-element-range input[type=range]::-moz-range-track {
@@ -910,84 +653,6 @@ span.password-toggle::before{
 }
 .form-element-range input[type=range]:focus::-ms-fill-upper {
 	background: #367ebd;
-}
-@media (min-width: 628px) {
-	.form-element-range {
-		line-height: 4vw;
-		margin: 3vw 0 0 0;
-	}
-	.form-element-range input[type=range] {
-		width: 100%; /* Specific width is required for Firefox. */
-		line-height: 4vw;
-	}
-
-	.form-element-range input[type=range]::-ms-track {
-		width: 100%;
-	}
-	/* Special styling for WebKit/Blink */
-	.form-element-range input[type=range]::-webkit-slider-thumb {
-		border: none;
-		height: 4vw;
-		width: 4vw;
-		margin-top: -1.8vw; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-	}
-
-	/* All the same stuff for Firefox */
-	.form-element-range input[type=range]::-moz-range-thumb {
-		height: 4vw;
-		width: 4vw;
-	}
-
-	/* All the same stuff for IE */
-	.form-element-range input[type=range]::-ms-thumb {
-		height: 4vw;
-		width: 4vw;
-	}
-
-	.form-element-range input[type=range]::-webkit-slider-runnable-track {
-		width: 100%;
-		height: 0.7vw;
-	}
-
-}
-@media (min-width: 992px) {
-	.form-element-range {
-		line-height: 1em;
-		margin: 1em 0 0 0;
-	}
-	.form-element-range input[type=range] {
-		width: 100%; /* Specific width is required for Firefox. */
-		line-height: 1em;
-	}
-
-	.form-element-range input[type=range]::-ms-track {
-		width: 100%;
-	}
-	/* Special styling for WebKit/Blink */
-	.form-element-range input[type=range]::-webkit-slider-thumb {
-		border: none;
-		height: 2em;
-		width: 2em;
-		margin-top: -0.8em; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-	}
-
-	/* All the same stuff for Firefox */
-	.form-element-range input[type=range]::-moz-range-thumb {
-		height: 2em;
-		width: 2em;
-	}
-
-	/* All the same stuff for IE */
-	.form-element-range input[type=range]::-ms-thumb {
-		height: 2em;
-		width: 2em;
-	}
-
-	.form-element-range input[type=range]::-webkit-slider-runnable-track {
-		width: 100%;
-		height: 0.5em;
-	}
-
 }
 /*!-----Forms------!*/
 
