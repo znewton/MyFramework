@@ -40,6 +40,7 @@ class ViewRenderer
 	<meta name="author" content="znewton" />
 	<link rel="stylesheet" href="/lib/css/view.css">
 	<link rel="stylesheet" href="/lib/css/components.css">
+	<link rel="stylesheet" href="/lib/css/content.css">
 	<link rel="icon" href="/lib/css/favicon-code.ico">
 	<link rel="stylesheet" href="/lib/css/font-awesome-4.7.0/css/font-awesome.min.css">
 	<script src="/lib/js/myFramework.js"></script>
