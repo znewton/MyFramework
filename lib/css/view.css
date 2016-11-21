@@ -499,7 +499,7 @@ footer a[href *= 'twitter.com']:hover::before{
 	footer a > svg{
 		padding: 10px 5px;
 		margin: 0;
-		width: 60%;
+		width: 280px;
 	}
 
 	footer a::before{

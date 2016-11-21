@@ -38,8 +38,14 @@ main a:hover::before{
 	transform: translateY(0);
 	transition:transform 0.2s, background-color 0.1s;
 }
-main code {
+
+code {
 	color: #F2991D;
 	background-color: #eee;
 	padding: 0 3px;
 }
+
+ul {
+	list-style: square;
+}
+
