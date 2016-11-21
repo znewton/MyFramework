@@ -1,8 +1,10 @@
 article {
+	padding: 0 5vw;
 	width: 100%;
 }
 @media (min-width: 992px) {
 	article {
+		padding: 0;
 		width: 992px;
 		margin: auto;
 	}
@@ -25,7 +27,7 @@ h3 small{
 		margin: 0.8em 0 0.8em 0;
 	}
 }
-main a{
+main a:not(.btn){
 	position: relative;
 	display: inline-block;
 	vertical-align: bottom;
@@ -33,7 +35,7 @@ main a{
 	overflow: hidden;
 	white-space: nowrap;
 }
-main a::before{
+main a:not(.btn)::before{
 	-webkit-font-smoothing: antialiased;
 	box-sizing: border-box;
 	pointer-events: none;
@@ -48,7 +50,7 @@ main a::before{
 	transform: translateY(99%);
 	transition: transform 0.2s, background-color 0.5s;
 }
-main a:hover::before{
+main a:not(.btn):hover::before{
 	background-color: #eee;
 	transform: translateY(0);
 	transition:transform 0.2s, background-color 0.1s;
@@ -64,3 +66,66 @@ ul {
 	list-style: square;
 }
 
+
+main > section.trapezoid {
+	min-height: 40vh;
+	position: relative;
+	background: #fafafa;
+	padding: 2vw 5vw;
+	z-index: 1;
+}
+@media (min-width: 992px){
+	main > section.trapezoid {
+		padding: 2em 3em;
+	}
+}
+main > section.trapezoid:before, main > section.trapezoid:after {
+	background: inherit;
+	content: '';
+	display: block;
+	height: 50%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	z-index: -1;
+	-webkit-backface-visibility: hidden;
+}
+main > section.trapezoid:before {
+	top: 0;
+	-webkit-transform: skewY(1deg);
+	transform: skewY(1deg);
+	-webkit-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+}
+main > section.trapezoid:after {
+	bottom: 0;
+	-webkit-transform: skewY(-1deg);
+	transform: skewY(-1deg);
+	-webkit-transform-origin: 100%;
+	transform-origin: 100%;
+}
+
+main > section.trapezoid:nth-child(odd){
+	background: #DCEBF4;
+}
+
+main > section.trapezoid:nth-child(odd):before {
+	-webkit-transform: skewY(-1deg);
+	transform: skewY(-1deg);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+main > section.trapezoid:nth-child(odd):after {
+	-webkit-transform: skewY(1deg);
+	transform: skewY(1deg);
+	-webkit-transform-origin: 0;
+	transform-origin: 0;
+}
+main > section.trapezoid:first-of-type:before {
+	-webkit-transform: skewY(0deg);
+	transform: skewY(0deg);
+}
+main > section.trapezoid:last-of-type:after {
+	-webkit-transform: skewY(0deg);
+	transform: skewY(0deg);
+}

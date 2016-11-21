@@ -124,7 +124,7 @@ a {
 	/*opacity: 0;*/
 }
 #navbar.scrolled{
-	box-shadow: 3px 0 5px 0 #ddd;
+	box-shadow: 3px 0 5px 0 rgba(0,0,0,0.4);
 	background: #fefefe;
 }
 #navbar:not(.scrolled) {
@@ -159,12 +159,12 @@ a {
 	}
 	#navbar div.left-nav{
 		left: 30px;
-		width: 45vw;
+		/*width: 45vw;*/
 		transition: left 0.3s ease;
 	}
 	#navbar div.right-nav{
 		right: 5vw;
-		width: 45vw;
+		/*width: 45vw;*/
 		display: inline-block;
 	}
 	#navbar a{
@@ -208,7 +208,7 @@ a {
 }
 #ham-menu > span {
 	position: absolute;
-	background-color: #3b3d4a;
+	background-color: #333;
 	display: block;
 	height: 2px;
 	width: 8vw;
@@ -327,7 +327,7 @@ a {
 }
 
 main {
-	padding: 15vw 5vw;
+	padding: 15vw 0;
 	min-height: 85vh;
 }
 

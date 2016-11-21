@@ -157,8 +157,17 @@ HTML;
 HTML;
 	}
 
-	public function hero(){
-		return '';
+	public function hero($src, $header = '', $subHeader = '', $others = ''){
+		return <<<HTML
+<div class="hero">
+	<img src="{$src}">
+	<div class="hero-content">
+		<div class="hero-header">{$header}</div>
+		<div class="hero-sub-header">{$subHeader}</div>
+		<div class="hero-others">{$others}</div>
+	</div>
+</div>
+HTML;
 	}
 
 	/**
