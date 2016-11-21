@@ -123,11 +123,9 @@ a {
 #navbar.scrolled a.home-link > svg > path:not(:last-of-type){
 	/*opacity: 0;*/
 }
-#navbar.scrolled{
+#navbar.scrolled {
 	box-shadow: 3px 0 5px 0 rgba(0,0,0,0.4);
 	background: #fefefe;
-}
-#navbar:not(.scrolled) {
 }
 
 @media  ( min-width: 628px){
@@ -241,6 +239,32 @@ a {
 @media (min-width: 992px) {
 	#ham-menu {
 		display: none;
+	}
+}
+
+.has-hero #navbar:not(.scrolled) a.home-link > svg > .a{
+	fill: #fff;
+}
+.has-hero #navbar:not(.scrolled) a.home-link > svg{
+	-webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.4));
+	filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.4));
+}
+.has-hero #navbar:not(.scrolled) a {
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+.has-hero #navbar:not(.scrolled) + #ham-menu > span {
+	background-color: #fff;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+.has-hero #navbar:not(.scrolled) a.home-link {
+	opacity: 0;
+	pointer-events: none;
+}
+@media (min-width: 992px) {
+	.has-hero #navbar:not(.scrolled) a.home-link {
+		opacity: 1;
+		pointer-events: none;
 	}
 }
 
