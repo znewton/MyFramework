@@ -840,6 +840,7 @@ span.password-toggle::before{
 	width: 100vw;
 	box-sizing: border-box;
 	overflow: hidden;
+	max-height: 100vh;
 }
 .hero > img {
 	position: relative;
