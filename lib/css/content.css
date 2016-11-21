@@ -1,4 +1,19 @@
-h3{
+article {
+	width: 100%;
+}
+@media (min-width: 992px) {
+	article {
+		width: 992px;
+		margin: auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	article {
+		width: 1200px;
+	}
+}
+	h3{
 	margin: 4vw 0 3vw 0;
 }
 h3 small{
@@ -40,7 +55,7 @@ main a:hover::before{
 }
 
 code {
-	color: #F2991D;
+	/*color: #F2991D;*/
 	background-color: #eee;
 	padding: 0 3px;
 }

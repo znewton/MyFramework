@@ -1,58 +1,60 @@
-<h2>About this Site</h2>
-This is a framework I made for funsies from scratch. No frameworks, no libraries (except <a href="http://fontawesome.io/">Font Awesome</a>)
-<!--<br>-->
-<h3>Front-end <small>HTML5, CSS3, JS, Font Awesome</small></h3>
-When making design decisions, <a href="http://www.lukew.com/ff/entry.asp?933">mobile first</a> was always in mind. For the first development cycle of making everything work,
-the page was only viewed in either a small window or the mobile inspection mode on Google Chrome. It was only after
-all of the components worked on that smallest screen size that breakpoints were added: first for tablet at <code>628px</code>, then
-for desktop at <code>992px</code>.
-<br><br>
-Another large design point when developing this site was an incorporation of some <a href="https://material.google.com/">material design guidelines</a>. An example
-of this is the form components, where the label (placeholder) never goes away so that the user does not have to struggle
-to remember what a field was for. A second example of this is the clickable elements such as buttons that have a slight
-drop shadow that increases on hover to indicate action.
-<br><br>
-In terms of inspiration, motivation, and reference, a lot was drawn from looking through the <a href="http://tympanus.net/codrops/category/playground/">Codrops Playground</a>.
-Some of the key demos for me include <a href="http://tympanus.net/Development/InlineAnchorStyles/">Inline Anchor Styles</a>,
-<a href="http://tympanus.net/Blueprints/SlidePushMenus/">Slide Push Menus</a>, and
-<a href="http://tympanus.net/Development/AnimatedCheckboxes/">Animate Checkboxes</a>.
-For coding style and methodology on the other hand, most of that training comes from working at Iowa State University
-Web Development Services under the tutelage of Zak Bell.
+<article>
+	<h2>About this Site</h2>
+	This is a framework I made for funsies from scratch. No frameworks, no libraries (except <a href="http://fontawesome.io/">Font Awesome</a>)
+	<!--<br>-->
+	<h3>Front-end <small>HTML5, CSS3, JS, Font Awesome</small></h3>
+	When making design decisions, <a href="http://www.lukew.com/ff/entry.asp?933">mobile first</a> was always in mind. For the first development cycle of making everything work,
+	the page was only viewed in either a small window or the mobile inspection mode on Google Chrome. It was only after
+	all of the components worked on that smallest screen size that breakpoints were added: first for tablet at <code>628px</code>, then
+	for desktop at <code>992px</code>.
+	<br><br>
+	Another large design point when developing this site was an incorporation of some <a href="https://material.google.com/">material design guidelines</a>. An example
+	of this is the form components, where the label (placeholder) never goes away so that the user does not have to struggle
+	to remember what a field was for. A second example of this is the clickable elements such as buttons that have a slight
+	drop shadow that increases on hover to indicate action.
+	<br><br>
+	In terms of inspiration, motivation, and reference, a lot was drawn from looking through the <a href="http://tympanus.net/codrops/category/playground/">Codrops Playground</a>.
+	Some of the key demos for me include <a href="http://tympanus.net/Development/InlineAnchorStyles/">Inline Anchor Styles</a>,
+	<a href="http://tympanus.net/Blueprints/SlidePushMenus/">Slide Push Menus</a>, and
+	<a href="http://tympanus.net/Development/AnimatedCheckboxes/">Animate Checkboxes</a>.
+	For coding style and methodology on the other hand, most of that training comes from working at Iowa State University
+	Web Development Services under the tutelage of Zak Bell.
 
-<h3>Back-end <small>PHP</small></h3>
-The backend of this lil framework consists of a router, a config file, a view renderer, and a component renderer. All of
-these were created from scratch through experimentation. Having worked with <a href="https://framework.zend.com/">Zend Framework 2</a> for a long time at ISU, it
-was intriguing as to what all went on behind the scenes and how hard it would be to make something similar; so that's what happened.
-While it's not as robust as Zend Framework or <a href="https://laravel.com/">Laravel</a> or any of the other PHP frameworks, this one does the trick for a
-static web pages with a bit of behind the scenes stuff. Obviously, there will be many updates to come for things like
-authentication and database querying.
-<br><br>
+	<h3>Back-end <small>PHP</small></h3>
+	The backend of this lil framework consists of a router, a config file, a view renderer, and a component renderer. All of
+	these were created from scratch through experimentation. Having worked with <a href="https://framework.zend.com/">Zend Framework 2</a> for a long time at ISU, it
+	was intriguing as to what all went on behind the scenes and how hard it would be to make something similar; so that's what happened.
+	While it's not as robust as Zend Framework or <a href="https://laravel.com/">Laravel</a> or any of the other PHP frameworks, this one does the trick for a
+	static web pages with a bit of behind the scenes stuff. Obviously, there will be many updates to come for things like
+	authentication and database querying.
+	<br><br>
 
-<h2>Files</h2>
-Here are some links to specific files on the <a href="https://github.com/znewton/MyFramework">Github Repository</a>. Go
-ahead, use it, share it, modify it for yourself. Just don't take it and redistribute it for money cause that's not what
-this is for.
-<br>
-<div style="display: inline-block; vertical-align: top;">
-	<h3>PHP</h3>
-	<ul>
-		<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/index.php">Router</a></li>
-		<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/Config.php">Config</a></li>
-		<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/ViewRenderer.php">View Renderer</a></li>
-		<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/ComponentRenderer.php">Component Renderer</a></li>
-	</ul>
-</div>
-<div style="display: inline-block; vertical-align: top;">
-	<h3>CSS</h3>
-	<ul>
-		<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/css/view.css">View</a></li>
-		<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/css/components.css">Components</a></li>
-		<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/css/content.css">Content</a></li>
-	</ul>
-</div>
-<div style="display: inline-block; vertical-align: top;">
-	<h3>JS</h3>
-	<ul>
-		<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/js/myFramework.js">View</a></li>
-	</ul>
-</div>
+	<h2>Files</h2>
+	Here are some links to specific files on the <a href="https://github.com/znewton/MyFramework">Github Repository</a>. Go
+	ahead, use it, share it, modify it for yourself. Just don't take it and redistribute it for money cause that's not what
+	this is for.
+	<br>
+	<div style="display: inline-block; vertical-align: top;">
+		<h3>PHP</h3>
+		<ul>
+			<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/index.php">Router</a></li>
+			<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/Config.php">Config</a></li>
+			<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/ViewRenderer.php">View Renderer</a></li>
+			<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/ComponentRenderer.php">Component Renderer</a></li>
+		</ul>
+	</div>
+	<div style="display: inline-block; vertical-align: top;">
+		<h3>CSS</h3>
+		<ul>
+			<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/css/view.css">View</a></li>
+			<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/css/components.css">Components</a></li>
+			<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/css/content.css">Content</a></li>
+		</ul>
+	</div>
+	<div style="display: inline-block; vertical-align: top;">
+		<h3>JS</h3>
+		<ul>
+			<li><a href="https://raw.githubusercontent.com/znewton/MyFramework/master/lib/js/myFramework.js">View</a></li>
+		</ul>
+	</div>
+</article>

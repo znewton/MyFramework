@@ -334,23 +334,11 @@ main {
 @media (min-width: 992px){
 	main{
 		padding: 90px 0;
-		width: 992px;
 		margin: auto;
 	}
 	#drawer {
 		width: 480px;
 		right: -480px;
-	}
-	@keyframes drawerClose {
-		from {right: 0;}
-		to {right: -480px;}
-	}
-}
-@media (min-width: 1200px){
-	main{
-		padding: 90px 0;
-		width: 1200px;
-		margin: auto;
 	}
 	@keyframes drawerClose {
 		from {right: 0;}
