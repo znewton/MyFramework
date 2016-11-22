@@ -67,7 +67,7 @@ if(!empty($routes) && $route != 'Route Does Not Exist')
 			header('Content-Type: application/json');
 			echo $api->processRequest();
 		}
-		if(isset($route['action']['view']))
+		else if(isset($route['action']['view']))
 		{
 			include 'lib/ViewRenderer.php';
 			$viewRenderer = new ViewRenderer();

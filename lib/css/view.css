@@ -161,7 +161,7 @@ a {
 		transition: left 0.3s ease;
 	}
 	#navbar div.right-nav{
-		right: 5vw;
+		right: 30px;
 		/*width: 45vw;*/
 		display: inline-block;
 	}
