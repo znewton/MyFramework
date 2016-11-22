@@ -130,3 +130,41 @@ main > section.trapezoid:last-of-type:after {
 	-webkit-transform: skewY(0deg);
 	transform: skewY(0deg);
 }
+
+.fitty {
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	min-height: 100%;
+	font-size: 1.2em;
+}
+.fitty-icon{
+	font-size: 10em;
+	text-align: center;
+}
+@media (min-width: 628px) {
+	.fitty {
+		width: 45%;
+	}
+	section > div.fitty.fitty-icon:last-of-type{
+		margin-left: 5%;
+		width: 40%;
+		border-left: 1px solid rgba(200, 200, 200, 0.5);
+	}
+	section > div.fitty.fitty-icon:first-of-type{
+		margin-right: 5%;
+		width: 40%;
+		border-right: 1px solid rgba(200, 200, 200, 0.5);
+	}
+}
+.align-left{
+	text-align: left;
+}
+.align-right{
+	text-align: right;
+}
+.spacer {
+	width: 20%;
+	height: 10px;
+	display: inline-block;
+}
